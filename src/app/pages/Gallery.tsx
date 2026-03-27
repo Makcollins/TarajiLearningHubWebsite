@@ -10,13 +10,13 @@ export function Gallery() {
       location: "Kisii town"
     },
     {
-      image: "./public/gallery/gbvart2.jpg",
+      image: "./public/gallery/gbvart2.JPG",
       title: "Community Empowerment Workshop",
       date: "February 2026",
       location: "Local Community"
     },
     {
-      image: "./public/gallery/josetalk1.jpg",
+      image: "./public/gallery/josetalk1.JPG",
       title: "Child Counselling",
       date: "October 2025",
       location: "Little Sunshine Academy"
@@ -28,7 +28,7 @@ export function Gallery() {
       location: "Little Sunshine Academy"
     },
     {
-      image: "./public/gallery/tarajipaints.jpg",
+      image: "./public/gallery/tarajipaints.JPG",
       title: "Art Therapy",
       date: "October 2025",
       location: "Little Sunshine Academy"
@@ -40,7 +40,7 @@ export function Gallery() {
       location: "Nyamira"
     },
     {
-      image: "./public/gallery/taraji2.jpg",
+      image: "./public/gallery/taraji2.JPG",
       title: "Child Counselling",
       date: "October 2025",
       location: "Little Sunshine Academy"
