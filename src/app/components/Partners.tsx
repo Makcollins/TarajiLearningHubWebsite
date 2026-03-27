@@ -27,7 +27,7 @@ export function Partners() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:mx-50 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:mx-50 gap-6">
           {partners.map((partner, index) => (
             <div
               key={index}

@@ -15,10 +15,10 @@ export function Hero() {
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
         <div className="max-w-3xl">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl text-amber-300 font-bold mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl text-white font-bold mb-6">
             Healing Minds. Restoring Hope. Building Resilient Futures
           </h1>
-          <p className="text-xl sm:text-2xl mb-8">
+          <p className="text-xl sm:text-2xl text-yellow-400 mb-8">
             Taraji Learning Hub
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
