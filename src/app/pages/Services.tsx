@@ -4,30 +4,26 @@ export function Services() {
   const services = [
     {
       icon: Brain,
-      title: "Healing Through Creative Expression",
-      description: "Helping individuals and at-risk families process trauma, manage stress and build coping mechanisms through theatre and art therapy",
-      features: [
-        "Individual therapy sessions",
-        "Group support programs",
-        "Crisis intervention",
-        "Family counseling"
-      ]
+      title: "Mental Health & Psychosocial Support (MHPSS)",
+      description: ` Art & play therapy; Individual and group
+counselling; Creative healing and
+sustainable Textile Initiative; and
+strengthening mental health referral
+systems.`,
+      features: []
     },
     {
-      icon: Users,
-      title: "Building Inclusive Communities",
-      description: "Comprehensive support services for survivors of gender-based violence, including emergency assistance, counseling, and legal advocacy.Foster inclusive societies that uphold the rights, dignity and active participation of PWDs in social, economic and civic aspects of life.",
-      features: [
-        "24/7 emergency hotline",
-        "Safe shelter referrals",
-        "Legal support and advocacy",
-        "Survivor support groups"
-      ]
+      icon: BookOpen,
+      title: "Trauma-Informed Education",
+      description: `Trauma Informed Parenting; Supporting
+caregivers, children in CCIs, and
+reintegrated families`,
+      features: []
     },
     {
-      icon:Shield,
-      title: "Supporting Survivors of GBV",
-      description: "Community workshops and training programs focused on mental health awareness, healthy relationships, and violence prevention.Creating a GBV-free society by assisting survivors meet their immediate needs, legal aid, and psychosocial support.",
+      icon: Shield,
+      title: "Child Protection & Safeguarding",
+      description: "Supporting safe reintegration and protection systems",
       features: [
         "Community workshops",
         "School programs",
@@ -36,32 +32,25 @@ export function Services() {
       ]
     },
     {
-      icon: Users,
-      title: "Community Support Groups",
-      description: "Safe, supportive spaces where individuals can connect, share experiences, and find strength in community.",
-      features: [
-        "Peer support circles",
-        "Women's empowerment groups",
-        "Youth programs",
-        "Caregiver support"
-      ]
-    },
-    {
-      icon:BookOpen,
-      title: "Preventing Violence Through Education.",
-      description: "Preventing future violence through education, community engagement and promoting gender equality for survivors..",
-      features: [
-        "Mindfulness training",
-        "Stress management workshops",
-        "Yoga and meditation",
-        "Nutrition guidance"
-      ]
+      icon: BookOpen,
+      title: "Capacity Strengthening",
+      description: "Training caregivers, social workers and community duty bearers",
+      features: []
     },
     {
       icon: GraduationCap,
-      title: "Advancing Knowledge & Capacity.Helpline Services",
-      description: "Preventing future violence through education, community engagement and promoting gender equality for survivors.",
-    }
+      title: "Knowledge Development",
+      description: `Development of manuals and handbooks for
+scalable interventions, Conducting research
+and situational analysis on MHPSS.
+`,
+      features: []
+    },
+    // {
+    //   icon: GraduationCap,
+    //   title: "Advancing Knowledge & Capacity.Helpline Services",
+    //   description: "Preventing future violence through education, community engagement and promoting gender equality for survivors.",
+    // }
   ];
 
   return (
@@ -136,37 +125,130 @@ export function Services() {
       {/* How to Access Section */}
       <div className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            How to Access Our Services
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+            OUR IMPLEMENTATION MODEL
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <p className="text-gray-600 text-2xl text-center mb-8">
+            Taraji applies a community-based, trauma
+            informed and scalable model:
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl font-bold from-cyan-600">1</span>
               </div>
-              <h3 className="font-bold text-lg text-gray-900 mb-2">Contact Us</h3>
-              <p className="text-gray-600">
-                Reach out via phone, email, or our contact form
+              <h3 className="font-bold text-lg text-gray-900 mb-2"> Creative Therapy Delivery</h3>
+              <p className="text-gray-600 text-justify">
+                <ul className="">
+                  <li>Art and play therapy sessions in:
+                    <ul className="list-disc list-inside italic text-left">
+                      <li>Children’s homes (CCIs)</li>
+                      <li>Schools and learning institutions</li>
+                      <li>Street-connected families</li>
+                      <li>Healthcare settings</li>
+                    </ul>
+                  </li>
+                  <li>Art for healing exhibitions</li>
+                  <li>Production of play-based learning
+                    mental health games, materials and
+                    equipment.</li>
+                </ul>
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl font-bold from-cyan-600">2</span>
               </div>
-              <h3 className="font-bold text-lg text-gray-900 mb-2">Initial Assessment</h3>
-              <p className="text-gray-600">
-                We'll discuss your needs and recommend appropriate services
+              <h3 className="font-bold text-lg text-gray-900 mb-2"> Therapeutic Program Structure</h3>
+              <p className="text-gray-600 text-justify">
+                <ul>
+                  <li>12-week structured healing
+                    cycles</li>
+                  <li>Individual and group
+                    counselling</li>
+                  <li>Emotional readiness
+                    assessments</li>
+                  <li>Creative Healing Textile
+                    Initiative (CHTI)</li>
+                </ul>
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl font-bold from-cyan-600">3</span>
               </div>
-              <h3 className="font-bold text-lg text-gray-900 mb-2">Get Support</h3>
-              <p className="text-gray-600">
-                Begin your journey with personalized support
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Community support and Systems strengthening Get Support</h3>
+              <p className="text-gray-600 text-justify">
+                <ul>
+                  <li>Trauma-informed Parenting
+                    (caregiver) training</li>
+                  <li>Capacity building for service
+                    providers (Directorate for
+                    Children Services DCS, social
+                    workers, police service, other
+                    CSOs)</li>
+                  <li>Safeguarding, protection and
+                    inclusion</li>
+                </ul>
               </p>
             </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl font-bold from-cyan-600">4</span>
+              </div>
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Reintegration Support</h3>
+              <p className="text-gray-600 text-justify">
+                <ul>
+                  <li>Psychosocial readiness before placement</li>
+                  <li>Post-placement follow-ups</li>
+                  <li>Strengthening attachment and family
+                    bonds</li>
+                </ul>
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl font-bold from-cyan-600">5</span>
+              </div>
+              <h3 className="font-bold text-lg text-gray-900 mb-2"> Research, consultancy and tools development</h3>
+              <p className="text-gray-600 text-justify">
+                <ul>
+                  <li>MHPSS toolkits for alternative care providers</li>
+                  <li>Development of art and play therapy modules</li>
+                  <li>Art and Play-based learning card games, mind games and equipment.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div className="">
+          <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-8 text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              EXPECTED OUTCOMES
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <ul>
+                <li>70% increased emotional
+                  resilience among
+                  children, care leavers
+                  (youths) and caregivers.</li>
+                <li>Reduced placement
+                  breakdown or relapse
+                  rates</li>
+                <li>Improved caregiver-child
+                  attachment</li>
+                <li>Strengthened trauma
+                  informed
+                  parenting/caregiving
+                  capacity</li>
+                <li>Institutionalized MHPSS
+                  within care systems</li>
+              </ul>
+
+            </p>
           </div>
           <div className="mt-12 text-center">
             <a
@@ -178,6 +260,7 @@ export function Services() {
           </div>
         </div>
       </div>
+
     </div>
   );
 }
