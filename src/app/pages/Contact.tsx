@@ -73,11 +73,11 @@ export function Contact() {
 
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Phone className="from-cyan-600" size={24} />
+                      <a href="https://wa.me/254745461993"><Phone className="from-cyan-600" size={24} /></a>
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                      <p className="text-gray-600">+254 745 461993</p>
+                      <p className="text-gray-600"><a href="https://wa.me/254745461993">+254 745 461993</a></p>
                       {/* <p className="text-sm from-cyan-600 font-semibold mt-1">
                         Crisis Hotline: 1-800-HELP-NOW
                       </p> */}
@@ -86,11 +86,11 @@ export function Contact() {
 
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail className="from-cyan-600" size={24} />
+                      <a href="mailto:info@tarajilearninghub.com"><Mail className="from-cyan-600" size={24} /></a>
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                      <p className="text-gray-600">info@tarajilearninghub.com</p>
+                      <p className="text-gray-600"><a href="mailto:info@tarajilearninghub.com">info@tarajilearninghub.com</a></p>
                       {/* <p className="text-gray-600">support@tarajilearning.org</p> */}
                     </div>
                   </div>
