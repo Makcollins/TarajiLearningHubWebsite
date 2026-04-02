@@ -1,5 +1,6 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line } from "recharts";
 import { AlertCircle, TrendingUp } from "lucide-react";
+import CountUp from "react-countup";
 
 export function Infographics() {
   // Gender-Based Violence Statistics
@@ -146,15 +147,15 @@ export function Infographics() {
               </div>
               <div className="space-y-4">
                 <div className="p-4 bg-white rounded-lg">
-                  <h4 className="font-bold text-lg text-gray-900 mb-2">2,150+</h4>
+                  <h4 className="font-bold text-lg text-gray-900 mb-2"><CountUp end={2150} duration={5}/>+</h4>
                   <p className="text-gray-600">individuals reached in Kisii and Nyamira Counties through schools and community sessions.</p>
                 </div>
                 <div className="p-4 bg-white rounded-lg">
-                  <h4 className="font-bold text-lg text-gray-900 mb-2">850+</h4>
+                  <h4 className="font-bold text-lg text-gray-900 mb-2"><CountUp end={850} duration={5}/>+</h4>
                   <p className="text-gray-600">Participated in awareness workshops</p>
                 </div>
                 <div className="p-4 bg-white rounded-lg">
-                  <h4 className="font-bold text-lg text-gray-900 mb-2">80%</h4>
+                  <h4 className="font-bold text-lg text-gray-900 mb-2"><CountUp end={80} duration={5}/>%</h4>
                   <p className="text-gray-600">Reported improved well-being after support</p>
                 </div>
               </div>

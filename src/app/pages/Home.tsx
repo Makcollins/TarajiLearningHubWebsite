@@ -4,13 +4,15 @@ import { Infographics } from "../components/Infographics";
 import { Partners } from "../components/Partners";
 import { BookOpen, Users, Heart, Award } from "lucide-react";
 import { Link } from "react-router";
+import CountUp from 'react-countup';
+
 
 export function Home() {
   const stats = [
-    { icon: Users, value: "2,150+", label: "Lives Impacted" },
-    { icon: BookOpen, value: "50+", label: "Workshops Conducted" },
-    { icon: Heart, value: "20+", label: "Counseling Sessions" },
-    { icon: Award, value: "2+", label: "Partner Organizations" },
+    { icon: Users, value: 2150 , label: "Lives Impacted" },
+    { icon: BookOpen, value: 50, label: "Workshops Conducted" },
+    { icon: Heart, value: 20, label: "Counseling Sessions" },
+    { icon: Award, value: 2, label: "Partner Organizations" },
   ];
 
   return (
@@ -29,7 +31,7 @@ export function Home() {
                     <Icon className="text-yellow-400" size={32} />
                   </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">
-                    {stat.value}
+                    <CountUp end={stat.value} duration={5} />+
                   </div>
                   <div className="text-gray-600">{stat.label}</div>
                 </div>

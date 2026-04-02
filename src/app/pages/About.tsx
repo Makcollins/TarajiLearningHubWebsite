@@ -1,6 +1,7 @@
 import { MissionVision } from "../components/MissionVision";
 import { Users, Award, Globe, Target, BookOpen, Heart, TicketCheck, ArrowBigDown, ArrowBigRightDash, Fingerprint, Pointer, Check } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import CountUp from "react-countup";
 
 export function About() {
   const teamMembers = [
@@ -27,10 +28,10 @@ export function About() {
   ];
 
   const achievements = [
-    { icon: Users, value: "2,150+", label: "Lives Impacted" },
-        { icon: BookOpen, value: "50+", label: "Workshops Conducted" },
-        { icon: Heart, value: "20+", label: "Counseling Sessions" },
-        { icon: Globe, value: "3+", label: "Counties reached" }
+    { icon: Users, value: 2150, label: "Lives Impacted" },
+        { icon: BookOpen, value: 50, label: "Workshops Conducted" },
+        { icon: Heart, value: 20, label: "Counseling Sessions" },
+        { icon: Globe, value: 3, label: "Counties reached" }
   ];
 
   return (
@@ -141,7 +142,7 @@ export function About() {
                     <Icon className="text-yellow-300" size={40} />
                   </div>
                   <div className="text-4xl font-bold text-gray-900 mb-2">
-                    {achievement.value}
+                    <CountUp end={achievement.value} duration={5}/>+
                   </div>
                   <div className="text-gray-600">{achievement.label}</div>
                 </div>
