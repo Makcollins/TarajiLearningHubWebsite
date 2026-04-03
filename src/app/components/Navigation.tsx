@@ -8,8 +8,8 @@ export function Navigation() {
 
   const links = [
     { path: "/", label: "Home" },
-    { path: "/about", label: "Who We Are" },
-    { path: "/services", label: "What We Do" },
+    { path: "/about-us", label: "Who We Are" },
+    { path: "/our-services", label: "What We Do" },
     { path: "/gallery", label: "Gallery" },
     { path: "/contact", label: "Contact Us" },
   ];

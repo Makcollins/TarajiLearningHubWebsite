@@ -29,28 +29,40 @@ export function About() {
 
   const achievements = [
     { icon: Users, value: 2150, label: "Lives Impacted" },
-        { icon: BookOpen, value: 50, label: "Workshops Conducted" },
-        { icon: Heart, value: 20, label: "Counseling Sessions" },
-        { icon: Globe, value: 3, label: "Counties reached" }
+    { icon: BookOpen, value: 50, label: "Workshops Conducted" },
+    { icon: Heart, value: 20, label: "Counseling Sessions" },
+    { icon: Globe, value: 3, label: "Counties reached" }
   ];
 
   return (
     <div>
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-cyan-700 text-white to-indigo-600 py-20">
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-yellow-400">About Us</h1>
-          <p className="text-xl from-cyan-100 max-w-3xl">
-            Established in Western Kenya,
-            Taraji Learning Hub is dedicated to
-            advancing mental health and
-            psychosocial well-being among
-            vulnerable children, youths and
-            caregivers. Through innovative,
-            creative and trauma-informed
-            approaches, Taraji provides safe
-            spaces where individuals can
-            creatively express, heal and thrive          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-yellow-400">About Us</h1>
+              <p className="text-xl from-cyan-100 max-w-3xl">
+                Established in Western Kenya,
+                Taraji Learning Hub is dedicated to
+                advancing mental health and
+                psychosocial well-being among
+                vulnerable children, youths and
+                caregivers. Through innovative,
+                creative and trauma-informed
+                approaches, Taraji provides safe
+                spaces where individuals can
+                creatively express, heal and thrive          </p>
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-xl h-96">
+              <ImageWithFallback
+                src="./public/pages/girl.JPG"
+                alt="Community workshop"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
@@ -80,35 +92,35 @@ export function About() {
                   <h3 className="text-2xl font-bold mb-2">OUR CORE FOCUS AREAS</h3>
                   <ul className="list-disc list-inside">
                     <li className="mb-2">
-                    <strong>Mental Health & Psychosocial Support
-                    (MHPSS): </strong>
-                    Art & play therapy; Individual and group
-                    counselling; Creative healing and
-                    sustainable Textile Initiative; and
-                    strengthening mental health referral
-                    systems.
+                      <strong>Mental Health & Psychosocial Support
+                        (MHPSS): </strong>
+                      Art & play therapy; Individual and group
+                      counselling; Creative healing and
+                      sustainable Textile Initiative; and
+                      strengthening mental health referral
+                      systems.
                     </li>
                     <li className="mb-2">
-                    <strong>Trauma-Informed Education: </strong> 
-                    Trauma Informed Parenting; Supporting
-                    caregivers, children in CCIs, and
-                    reintegrated families.
+                      <strong>Trauma-Informed Education: </strong>
+                      Trauma Informed Parenting; Supporting
+                      caregivers, children in CCIs, and
+                      reintegrated families.
                     </li>
                     <li className="mb-2">
-                    <strong>Child Protection & Safeguarding: </strong>
-                    Supporting safe reintegration and
-                    protection systems
+                      <strong>Child Protection & Safeguarding: </strong>
+                      Supporting safe reintegration and
+                      protection systems
                     </li>
                     <li className="mb-2">
-                    <strong>Capacity Strengthening: </strong> 
-                    Training caregivers, social workers and
-                    community duty bearers
+                      <strong>Capacity Strengthening: </strong>
+                      Training caregivers, social workers and
+                      community duty bearers
                     </li>
                     <li className="mb-2">
-                    <strong>Knowledge Development: </strong>
-                    Development of manuals and handbooks for
-                    scalable interventions, Conducting research
-                    and situational analysis on MHPSS.
+                      <strong>Knowledge Development: </strong>
+                      Development of manuals and handbooks for
+                      scalable interventions, Conducting research
+                      and situational analysis on MHPSS.
                     </li>
                   </ul>
                 </div>
@@ -142,7 +154,7 @@ export function About() {
                     <Icon className="text-yellow-300" size={40} />
                   </div>
                   <div className="text-4xl font-bold text-gray-900 mb-2">
-                    <CountUp end={achievement.value} duration={5}/>+
+                    <CountUp end={achievement.value} duration={5} />+
                   </div>
                   <div className="text-gray-600">{achievement.label}</div>
                 </div>

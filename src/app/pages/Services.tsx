@@ -1,4 +1,5 @@
 import { Brain, Shield, BookOpen, Users, Heart, MessageCircle, GraduationCap, Phone } from "lucide-react";
+import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 export function Services() {
   const services = [
@@ -58,10 +59,21 @@ and situational analysis on MHPSS.
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-cyan-700 to-indigo-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl font-bold text-yellow-400 mb-6">Our Services</h1>
-          <p className="text-xl from-cyan-100 max-w-3xl">
-            Comprehensive support and resources for mental health, gender-based violence prevention, and community empowerment.
-          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl sm:text-5xl font-bold text-yellow-400 mb-6">Our Services</h1>
+              <p className="text-xl from-cyan-100 max-w-3xl">
+                Comprehensive support and resources for mental health, gender-based violence prevention, and community empowerment.
+              </p>
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-xl h-96">
+              <ImageWithFallback
+                src="./public/pages/graphic2.png"
+                alt="Taraji Lurning hub infographic"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
