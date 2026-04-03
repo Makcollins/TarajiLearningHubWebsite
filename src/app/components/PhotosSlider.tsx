@@ -42,7 +42,7 @@ export function PhotoSlider() {
                     {photo_gallery_paths.map((photo) => {
                         return (
                             <div className="md:h-fit border-8 border-gray-200 rounded-xl overflow-hidden shadow-xl">
-                                <img
+                                <ImageWithFallback
                                     src={`./public/gallery/${photo}`}
                                     alt="Taraji Learning hub "
                                     className="w-full h-full"
