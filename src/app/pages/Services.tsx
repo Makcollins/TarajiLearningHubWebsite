@@ -1,50 +1,57 @@
 import { Brain, Shield, BookOpen, Users, Heart, MessageCircle, GraduationCap, Phone } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import "./css/services.css";
+import { TypeAnimation } from "react-type-animation";
+import { ImplementationModel } from "../components/ImplementationModel";
+
+// // const handleMouseEnter () => {
+
+// }
 
 export function Services() {
   const services = [
     {
       icon: Brain,
       title: "Mental Health & Psychosocial Support (MHPSS)",
-      description: ` Art & play therapy; Individual and group
-counselling; Creative healing and
-sustainable Textile Initiative; and
-strengthening mental health referral
-systems.`,
+      description: ` We provide a safe harbor for emotional recovery through diverse therapeutic paths. 
+      From Art & Play Therapy and professional Individual and Group Counseling 
+      to our innovative Sustainable Textile Initiative,
+      we integrate creative healing to help individuals process trauma and build coping skills..`,
       features: []
     },
     {
       icon: BookOpen,
       title: "Trauma-Informed Education",
-      description: `Trauma Informed Parenting; Supporting
-caregivers, children in CCIs, and
-reintegrated families`,
+      description: `Sustainable healing happens within a supported community. 
+      We empower the foundation of the home through Trauma-Informed Parenting programs and 
+      dedicated support for caregivers, children in CCIs, and reintegrated families, 
+      ensuring a stable environment for growth`,
       features: []
     },
     {
       icon: Shield,
       title: "Child Protection & Safeguarding",
-      description: "Supporting safe reintegration and protection systems",
-      features: [
-        "Community workshops",
-        "School programs",
-        "Workplace training",
-        "Public awareness campaigns"
-      ]
+      description: `We are committed to the safety and rights of every child. 
+      Our experts work to strengthen protection systems and facilitate safe reintegration, 
+      while simultaneously building robust mental health referral networks to ensure seamless access to care.`,
+      features: []
     },
     {
       icon: BookOpen,
       title: "Capacity Strengthening",
-      description: "Training caregivers, social workers and community duty bearers",
+      description: `Empowering the community to lead the way. 
+      We transform child welfare by providing essential trauma-informed training to caregivers, social workers, 
+      and community leaders. Our mission is to close the knowledge gap, 
+      ensuring professional-grade support is available at every level of a child's life.`,
       features: []
     },
     {
       icon: GraduationCap,
       title: "Knowledge Development",
-      description: `Development of manuals and handbooks for
-scalable interventions, Conducting research
-and situational analysis on MHPSS.
-`,
+      description: `To ensure our impact is lasting and scalable, we bridge practice with theory. 
+      We conduct in-depth MHPSS research and situational analysis and 
+      develop specialized manuals and handbooks that serve as blueprints 
+      for high-quality, scalable interventions across the sector`,
       features: []
     },
     // {
@@ -57,18 +64,35 @@ and situational analysis on MHPSS.
   return (
     <div>
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-cyan-700 to-indigo-600 text-white py-20">
+      <div className="relative bg-gradient-to-br from-cyan-700 to-indigo-600 text-white py-5">
+        <div className="absolute inset-0 overflow-hidden">
+          <ImageWithFallback
+            src="./public/pages/lk.JPG"
+            alt="Students learning"
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl sm:text-5xl font-bold text-yellow-400 mb-6">Our Services</h1>
               <p className="text-xl from-cyan-100 max-w-3xl">
-                Comprehensive support and resources for mental health, gender-based violence prevention, and community empowerment.
+                <TypeAnimation
+                  cursor={false}
+                  sequence={[
+                    `At Taraji Learning Hub, we provide a holistic ecosystem of support designed to foster healing, safety, and long-term resilience. 
+                    From Mental Health & Psychosocial Support, Trauma-Informed Education to Knowledge Development, 
+                    researching and creating the manuals that define the future of mental health and social protection systems.`,
+                  ]}
+                  // style={{ fontSize: '2em' }}
+                  repeat={1}
+                />
+
               </p>
             </div>
-            <div className="rounded-xl overflow-hidden shadow-xl h-96">
+            <div className="growing-image rounded-xl overflow-hidden shadow-xl">
               <ImageWithFallback
-                src="./public/pages/graphic2.png"
+                src="./public/infographics/taraji-services.png"
                 alt="Taraji Lurning hub infographic"
                 className="w-full h-full object-cover"
               />
@@ -133,109 +157,11 @@ and situational analysis on MHPSS.
           </div>
         </div>
       </div> */}
+      <ImplementationModel />
 
       {/* How to Access Section */}
       <div className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
-            OUR IMPLEMENTATION MODEL
-          </h2>
-          <p className="text-gray-600 text-2xl text-center mb-8">
-            Taraji applies a community-based, trauma
-            informed and scalable model:
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl font-bold from-cyan-600">1</span>
-              </div>
-              <h3 className="font-bold text-lg text-gray-900 mb-2"> Creative Therapy Delivery</h3>
-              <p className="text-gray-600 text-justify">
-                <ul className="">
-                  <li>Art and play therapy sessions in:
-                    <ul className="list-disc list-inside italic text-left">
-                      <li>Children’s homes (CCIs)</li>
-                      <li>Schools and learning institutions</li>
-                      <li>Street-connected families</li>
-                      <li>Healthcare settings</li>
-                    </ul>
-                  </li>
-                  <li>Art for healing exhibitions</li>
-                  <li>Production of play-based learning
-                    mental health games, materials and
-                    equipment.</li>
-                </ul>
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl font-bold from-cyan-600">2</span>
-              </div>
-              <h3 className="font-bold text-lg text-gray-900 mb-2"> Therapeutic Program Structure</h3>
-              <p className="text-gray-600 text-justify">
-                <ul>
-                  <li>12-week structured healing
-                    cycles</li>
-                  <li>Individual and group
-                    counselling</li>
-                  <li>Emotional readiness
-                    assessments</li>
-                  <li>Creative Healing Textile
-                    Initiative (CHTI)</li>
-                </ul>
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl font-bold from-cyan-600">3</span>
-              </div>
-              <h3 className="font-bold text-lg text-gray-900 mb-2">Community support and Systems strengthening Get Support</h3>
-              <p className="text-gray-600 text-justify">
-                <ul>
-                  <li>Trauma-informed Parenting
-                    (caregiver) training</li>
-                  <li>Capacity building for service
-                    providers (Directorate for
-                    Children Services DCS, social
-                    workers, police service, other
-                    CSOs)</li>
-                  <li>Safeguarding, protection and
-                    inclusion</li>
-                </ul>
-              </p>
-            </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl font-bold from-cyan-600">4</span>
-              </div>
-              <h3 className="font-bold text-lg text-gray-900 mb-2">Reintegration Support</h3>
-              <p className="text-gray-600 text-justify">
-                <ul>
-                  <li>Psychosocial readiness before placement</li>
-                  <li>Post-placement follow-ups</li>
-                  <li>Strengthening attachment and family
-                    bonds</li>
-                </ul>
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl font-bold from-cyan-600">5</span>
-              </div>
-              <h3 className="font-bold text-lg text-gray-900 mb-2"> Research, consultancy and tools development</h3>
-              <p className="text-gray-600 text-justify">
-                <ul>
-                  <li>MHPSS toolkits for alternative care providers</li>
-                  <li>Development of art and play therapy modules</li>
-                  <li>Art and Play-based learning card games, mind games and equipment.</li>
-                </ul>
-              </p>
-            </div>
-          </div>
-
-        </div>
         <div className="">
           <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-8 text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">

@@ -1,5 +1,6 @@
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Calendar, MapPin } from "lucide-react";
+import { PhotoSlider } from "../components/PhotosSlider";
 
 export function Gallery() {
   const galleryItems = [
@@ -16,10 +17,10 @@ export function Gallery() {
       location: "Local Community"
     },
     {
-      image: "./public/gallery/josetalk1.JPG",
-      title: "Child Counselling",
-      date: "October 2025",
-      location: "Little Sunshine Academy"
+      image: "./public/gallery/kccYouth1.JPG",
+      title: "Play Therapy",
+      date: "July 2025",
+      location: "Kisii"
     },
     {
       image: "./public/gallery/lsa.jpg",
@@ -50,13 +51,26 @@ export function Gallery() {
       title: "Visit to Prison",
       date: "August 2024",
       location: "Kisii women prison"
+    },
+    {
+      image: "./public/gallery/group.JPG",
+      title: "Team Building",
+      date: "January 2026",
+      location: "Kisii"
     }
   ];
 
   return (
     <div>
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-cyan-700 to-indigo-600 text-white py-20">
+      <div className="relative bg-gradient-to-br from-cyan-700 to-indigo-600 text-white py-20">
+        <div className="absolute inset-0 overflow-hidden">
+          <ImageWithFallback
+            src="./public/pages/lk.JPG"
+            alt="Students learning"
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-yellow-400">Gallery</h1>
           <p className="text-xl from-cyan-100 max-w-3xl">
@@ -101,6 +115,15 @@ export function Gallery() {
           </div>
         </div>
       </div>
+      <div className="w-full bg-gray-700 py-5">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center my-5">
+          <h2 className="text-3xl font-bold text-white">
+            More...
+          </h2>
+            <PhotoSlider />
+        </div>
+      </div>
+
 
       {/* Impact Section */}
       <div className="py-16 bg-white">

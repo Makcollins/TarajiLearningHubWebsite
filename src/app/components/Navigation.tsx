@@ -1,18 +1,24 @@
 import { Link, useLocation } from "react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { FaAngleDown } from "react-icons/fa6";
 
 export function Navigation() {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
 
   const links = [
     { path: "/", label: "Home" },
     { path: "/about-us", label: "Who We Are" },
     { path: "/our-services", label: "What We Do" },
+    { path: "/our-impact", label: "Our Impact" },
+  ];
+  const more_menu = [
     { path: "/gallery", label: "Gallery" },
     { path: "/contact", label: "Contact Us" },
   ];
+  const phone_menu = links.concat(more_menu);
 
   const isActive = (path: string) => {
     if (path === "/") {
@@ -42,15 +48,34 @@ export function Navigation() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`${
-                  isActive(link.path)
-                    ? "from-cyan-600 border-b-2 border-cyan-600"
-                    : "text-gray-700 hover:from-cyan-600"
-                } transition-colors pb-1`}
+                className={`${isActive(link.path)
+                  ? "text-cyan-600 border-b-2 border-cyan-600"
+                  : "text-gray-700 hover:text-cyan-600"
+                  } transition-colors pb-1`}
               >
                 {link.label}
               </Link>
             ))}
+            <div>
+              <div className={`flex items-center px-2 text-gray-700 hover:text-cyan-600`} 
+              onClick={()=>setMoreOpen(true)} onMouseEnter={()=>setMoreOpen(true)}>
+                More <FaAngleDown /></div>
+              <div className="absolute pb-2 @max-lg:right-0 bg-white" onMouseLeave={()=>setMoreOpen(false)}>
+               { moreOpen && more_menu.map((link) => (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    onClick={() => setMoreOpen(false)}
+                    className={`block p-2 py-2 ${isActive(link.path)
+                      ? "text-cyan-600 bg-cyan-50"
+                      : "text-gray-700 hover:bg-gray-50"
+                      }`} 
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -65,16 +90,15 @@ export function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden pb-4">
-            {links.map((link) => (
+            {phone_menu.map((link:any) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={`block py-2 px-4 ${
-                  isActive(link.path)
-                    ? "from-cyan-600 bg-cyan-50"
-                    : "text-gray-700 hover:bg-gray-50"
-                }`}
+                className={`block py-2 px-4 ${isActive(link.path)
+                  ? "text-cyan-600 bg-cyan-50"
+                  : "text-gray-700 hover:bg-gray-50"
+                  }`}
               >
                 {link.label}
               </Link>

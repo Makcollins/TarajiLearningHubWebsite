@@ -2,6 +2,7 @@ import { MissionVision } from "../components/MissionVision";
 import { Users, Award, Globe, Target, BookOpen, Heart, TicketCheck, ArrowBigDown, ArrowBigRightDash, Fingerprint, Pointer, Check } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import CountUp from "react-countup";
+import { Achievements } from "../components/Achivements";
 
 export function About() {
   const teamMembers = [
@@ -27,17 +28,17 @@ export function About() {
     },
   ];
 
-  const achievements = [
-    { icon: Users, value: 2150, label: "Lives Impacted" },
-    { icon: BookOpen, value: 50, label: "Workshops Conducted" },
-    { icon: Heart, value: 20, label: "Counseling Sessions" },
-    { icon: Globe, value: 3, label: "Counties reached" }
-  ];
-
   return (
     <div>
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-cyan-700 text-white to-indigo-600 py-20">
+      <div className="relative bg-gradient-to-br from-cyan-700 text-white to-indigo-600 py-5">
+        <div className="absolute inset-0 overflow-hidden">
+          <ImageWithFallback
+            src="./public/pages/lk.JPG"
+            alt="Students learning"
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -140,7 +141,8 @@ export function About() {
       <MissionVision />
 
       {/* Achievements */}
-      <div className="py-16 bg-white">
+      <Achievements/>
+      {/* <div id="impact" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
             Our Impact
@@ -162,7 +164,7 @@ export function About() {
             })}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Team Section */}
       <div className="py-16 bg-gray-50">

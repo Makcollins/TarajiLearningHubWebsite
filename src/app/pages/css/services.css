@@ -1,0 +1,5 @@
+@keyframes grow {
+     from {transform:scale(0);} 
+     to {transform:scale(1);} }
+
+.growing-image { animation: grow 3s linear 1 forwards; }
