@@ -11,25 +11,25 @@ export function Gallery() {
       location: "Kisii town"
     },
     {
-      image: "./public/gallery/gbvart2.JPG",
+      image: "https://i.ibb.co/ch3hfgfX/gbvart2.jpg",
       title: "Community Empowerment Workshop",
       date: "February 2026",
       location: "Local Community"
     },
     {
-      image: "./public/gallery/kccYouth1.JPG",
+      image: "https://i.ibb.co/pBYkVxN6/kcc-Youth1.jpg",
       title: "Play Therapy",
       date: "July 2025",
       location: "Kisii"
     },
     {
-      image: "./public/gallery/lsa.jpg",
+      image: "https://i.ibb.co/xS0JmJ5z/lsa.jpg",
       title: "Child Counselling",
       date: "October 2025",
       location: "Little Sunshine Academy"
     },
     {
-      image: "./public/gallery/tarajipaints.JPG",
+      image: "https://i.ibb.co/fdXTkFvk/tarajipaints.jpg",
       title: "Art Therapy",
       date: "October 2025",
       location: "Little Sunshine Academy"
@@ -41,19 +41,19 @@ export function Gallery() {
       location: "Nyamira"
     },
     {
-      image: "./public/gallery/taraji2.JPG",
+      image: "https://i.ibb.co/Fb063R8p/taraji2.jpg",
       title: "Child Counselling",
       date: "October 2025",
       location: "Little Sunshine Academy"
     },
     {
-      image: "./public/gallery/tl2.jpg",
+      image: "https://i.ibb.co/K8VtpQ4/tl2.jpg",
       title: "Visit to Prison",
       date: "August 2024",
       location: "Kisii women prison"
     },
     {
-      image: "./public/gallery/group.JPG",
+      image: ".https://i.ibb.co/3y89bpbG/group.jpg",
       title: "Team Building",
       date: "January 2026",
       location: "Kisii"
