@@ -35,7 +35,7 @@ export function Gallery() {
       location: "Little Sunshine Academy"
     },
     {
-      image: "./public/gallery/tarajiteam.png",
+      image: "https://i.ibb.co/1GwsQPm1/tarajiteam.png",
       title: "Team Building Workshop",
       date: "June 2025",
       location: "Nyamira"
