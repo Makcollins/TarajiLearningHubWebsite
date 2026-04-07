@@ -5,7 +5,7 @@ import { PhotoSlider } from "../components/PhotosSlider";
 export function Gallery() {
   const galleryItems = [
     {
-      image: "./public/gallery/ay2.jpg",
+      image: "https://i.ibb.co/tp2dnxqV/ay2.jpg",
       title: "Youth Empowerment Workshop",
       date: "August 2026",
       location: "Kisii town"

@@ -35,7 +35,7 @@ export function Navigation() {
           <Link to="/" className="flex items-center space-x-2">
             {/* <div className="w-10 h-10 bg-gradient-to-br from-cyan-600 to-yellow-600 rounded-lg flex items-center justify-center"> */}
             <div className="w-10 h-10 flex items-center justify-center">
-              <span className="text-white font-bold text-xl"><img src="./public/logo/taraji 3d.png" alt="" /></span>
+              <span className="text-white font-bold text-xl"><img src="https://i.ibb.co/ymP93ng5/taraji-3d.png" alt="" /></span>
             </div>
             <span className="font-bold text-xl text-gray-900">
               Taraji Learning Hub

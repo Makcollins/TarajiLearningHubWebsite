@@ -129,7 +129,7 @@ export function About() {
             </div>
             <div className="rounded-xl overflow-hidden shadow-xl">
               <ImageWithFallback
-                src="./public/gallery/tarajipaints.JPG"
+                src="https://i.ibb.co/fdXTkFvk/tarajipaints.jpg"
                 alt="Community workshop"
                 className="w-full h-full object-cover"
               />
