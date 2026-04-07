@@ -67,7 +67,7 @@ export function Services() {
       <div className="relative bg-gradient-to-br from-cyan-700 to-indigo-600 text-white py-5">
         <div className="absolute inset-0 overflow-hidden">
           <ImageWithFallback
-            src="./public/pages/lk.JPG"
+            src="https://i.ibb.co/W4M85Dms/lk.jpg"
             alt="Students learning"
             className="w-full h-full object-cover opacity-20"
           />
@@ -92,7 +92,7 @@ export function Services() {
             </div>
             <div className="growing-image rounded-xl overflow-hidden shadow-xl">
               <ImageWithFallback
-                src="./public/infographics/taraji-services.png"
+                src="https://i.ibb.co/WWM68Wp9/taraji-services.png"
                 alt="Taraji Lurning hub infographic"
                 className="w-full h-full object-cover"
               />

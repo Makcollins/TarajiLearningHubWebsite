@@ -8,7 +8,7 @@ export function Hero() {
     <div className="relative bg-gradient-to-br from-cyan-700 via-cyan-600 to-indigo-600 text-white">
       <div className="absolute inset-0 overflow-hidden">
         <ImageWithFallback
-          src="./public/pages/lk.JPG"
+          src="https://i.ibb.co/W4M85Dms/lk.jpg"
           alt="Students learning"
           className="w-full h-full object-cover opacity-20"
         />

@@ -9,22 +9,22 @@ export function About() {
     {
       name: "Joseph Onyonka",
       role: "C.E.O. / Mental Health Educator",
-      image: "./public/team/joseph.png"
+      image: "https://i.ibb.co/jk44PgPk/joseph.png"
     },
     {
       name: "Cliff Omayio",
       role: "Education Specialist",
-      image: "./public/team/cliff.jpg"
+      image: "https://i.ibb.co/JjcRyBVM/cliff.jpg"
     },
     {
       name: "Lanith Juma",
       role: "IT Specialist",
-      image: "./public/team/jumataraji.jpg"
+      image: "https://i.ibb.co/9HydZ2Nx/jumataraji.jpg"
     },
     {
       name: "Bridget Kamau",
       role: "Education Specialist",
-      image: "./public/team/bridget.jpg"
+      image: "https://i.ibb.co/HTz3CgvY/bridget.jpg"
     },
   ];
 
@@ -34,7 +34,7 @@ export function About() {
       <div className="relative bg-gradient-to-br from-cyan-700 text-white to-indigo-600 py-5">
         <div className="absolute inset-0 overflow-hidden">
           <ImageWithFallback
-            src="./public/pages/lk.JPG"
+            src="https://i.ibb.co/W4M85Dms/lk.jpg"
             alt="Students learning"
             className="w-full h-full object-cover opacity-20"
           />
@@ -58,7 +58,7 @@ export function About() {
             </div>
             <div className="rounded-xl overflow-hidden shadow-xl h-96">
               <ImageWithFallback
-                src="./public/pages/girl.JPG"
+                src="https://i.ibb.co/Z1FXp73Y/MG-1727.jpg"
                 alt="Community workshop"
                 className="w-full h-full object-cover"
               />
