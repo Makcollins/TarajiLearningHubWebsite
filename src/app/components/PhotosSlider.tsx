@@ -5,7 +5,6 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function PhotoSlider() {
     const photo_gallery_paths = [
-        "https://i.ibb.co/W4M85Dms/lk.jpg",
         "https://i.ibb.co/sxRxfJF/tarajiart.jpg",
         "https://i.ibb.co/hJT106sn/at-table.jpg",
         "https://i.ibb.co/tp2dnxqV/ay2.jpg",
