@@ -53,7 +53,7 @@ export function Gallery() {
       location: "Kisii women prison"
     },
     {
-      image: ".https://i.ibb.co/3y89bpbG/group.jpg",
+      image: "https://i.ibb.co/3y89bpbG/group.jpg",
       title: "Team Building",
       date: "January 2026",
       location: "Kisii"
