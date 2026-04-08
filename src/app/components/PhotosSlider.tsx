@@ -44,7 +44,7 @@ export function PhotoSlider() {
                         return (
                             <div className="md:h-fit border-8 border-gray-200 rounded-xl overflow-hidden shadow-xl">
                                 <ImageWithFallback
-                                    src={`./public/gallery/${photo}`}
+                                    src={`${photo}`}
                                     alt="Taraji Learning hub "
                                     className="w-full h-full"
                                 />
