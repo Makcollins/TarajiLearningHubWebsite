@@ -1,6 +1,28 @@
-import { RouterProvider } from "react-router";
-import { router } from "./routes";
+import { BrowserRouter, Route, Routes } from "react-router";
+import { Navigation } from "./components/Navigation";
+import { Home } from "./pages/Home";
+import { About } from "./pages/About";
+import { Services } from "./pages/Services";
+import { Infographics } from "./components/Infographics";
+import { Contact } from "./pages/Contact";
+import { Gallery } from "./pages/Gallery";
+import { Footer } from "./components/Footer";
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  // return <RouterProvider router={router} />;
+  return <>
+  <BrowserRouter>
+  <Navigation></Navigation>
+  <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/about-us/' element={<About />} />
+      <Route path='/our-services/' element={<Services />} />
+      <Route path='/our-impact/' element={<Infographics />} />
+      <Route path='/contact/' element={<Contact />} />
+      <Route path='/gallery/' element={<Gallery/>} />
+    </Routes>
+    <Footer />
+  </BrowserRouter>
+  </>
 }
+

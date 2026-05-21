@@ -12,7 +12,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 flex items-center justify-center">
-                <span className="text-white font-bold text-xl"><img src="./public/logo/taraji 3d.png" alt="" /></span>
+                <span className="text-white font-bold text-xl"><img src="/logo/taraji-3d.png" alt="" /></span>
               </div>
               <span className="font-bold text-lg">Taraji Learning Hub</span>
             </div>
@@ -31,17 +31,22 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  About Us
+                <Link to="/about-us/" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Who we are
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <Link to="/our-services/" className="text-gray-400 hover:text-white transition-colors text-sm">
                   What we do
                 </Link>
               </li>
               <li>
-                <Link to="/gallery" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <Link to="/our-impact/" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Our Impact
+                </Link>
+              </li>
+              <li>
+                <Link to="/gallery/" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Gallery
                 </Link>
               </li>

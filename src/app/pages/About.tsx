@@ -9,22 +9,22 @@ export function About() {
     {
       name: "Joseph Onyonka",
       role: "C.E.O. / Mental Health Educator",
-      image: "https://i.ibb.co/jk44PgPk/joseph.png"
+      image: "/team/joseph.png"
     },
     {
       name: "Cliff Omayio",
       role: "Education Specialist",
-      image: "https://i.ibb.co/JjcRyBVM/cliff.jpg"
+      image: "/team/cliff.jpg"
     },
     {
       name: "Lanith Juma",
       role: "IT Specialist",
-      image: "https://i.ibb.co/9HydZ2Nx/jumataraji.jpg"
+      image: "/team/jumataraji.jpg"
     },
     {
       name: "Bridget Kamau",
       role: "Education Specialist",
-      image: "https://i.ibb.co/HTz3CgvY/bridget.jpg"
+      image: "/team/bridget.jpg"
     },
   ];
 
@@ -34,7 +34,7 @@ export function About() {
       <div className="relative bg-gradient-to-br from-cyan-700 text-white to-indigo-600 py-5">
         <div className="absolute inset-0 overflow-hidden">
           <ImageWithFallback
-            src="https://i.ibb.co/W4M85Dms/lk.jpg"
+            src="/pages/lk.JPG"
             alt="Students learning"
             className="w-full h-full object-cover opacity-20"
           />
@@ -42,8 +42,15 @@ export function About() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="rounded-xl overflow-hidden shadow-xl h-96 hover:animate-pulse">
+              <ImageWithFallback
+                src="/gallery/girl.JPG"
+                alt="Community workshop"
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div>
-              <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-yellow-400">About Us</h1>
+              <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-yellow-400 animate-bounce">About Us</h1>
               <p className="text-xl from-cyan-100 max-w-3xl">
                 Established in Western Kenya,
                 Taraji Learning Hub is dedicated to
@@ -56,13 +63,6 @@ export function About() {
                 spaces where individuals can
                 creatively express, heal and thrive          </p>
             </div>
-            <div className="rounded-xl overflow-hidden shadow-xl h-96">
-              <ImageWithFallback
-                src="https://i.ibb.co/Z1FXp73Y/MG-1727.jpg"
-                alt="Community workshop"
-                className="w-full h-full object-cover"
-              />
-            </div>
           </div>
         </div>
       </div>
@@ -72,7 +72,7 @@ export function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 animate-pulse">Our Story</h2>
               <div className="space-y-4 text-gray-600">
                 <p>
                   Since its inception, Taraji has
@@ -127,9 +127,9 @@ export function About() {
                 </div>
               </div>
             </div>
-            <div className="rounded-xl overflow-hidden shadow-xl">
+            <div className="rounded-xl overflow-hidden h-full shadow-xl heroImg">
               <ImageWithFallback
-                src="https://i.ibb.co/fdXTkFvk/tarajipaints.jpg"
+                src="/gallery/tarajipaints.JPG"
                 alt="Community workshop"
                 className="w-full h-full object-cover"
               />
@@ -141,7 +141,7 @@ export function About() {
       <MissionVision />
 
       {/* Achievements */}
-      <Achievements/>
+      <Achievements />
       {/* <div id="impact" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">

@@ -175,7 +175,7 @@ export function ImplementationModel() {
             </div>
           </div> */}
 
-            <div className="grid grid-cols-1 md:flex md:flex-row gap-4 mb-12">
+            <div className="grid grid-cols-1 md:flex md:flex-row md:h-80 gap-4 mb-12">
                 {implementationSteps.map((step, index) => {
                     return(<div onMouseEnter={()=> setActiveStep(step.id)} className= {`py-10 max-md:px-10 rounded-lg ${step.bg_color} ${step.id === activeStep? 'px-10 text-left md:flex-1 md:w-40': 'text-center md:flex-none md:w-15'} `}>
                     <div>

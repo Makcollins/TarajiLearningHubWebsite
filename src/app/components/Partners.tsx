@@ -1,4 +1,5 @@
 import { Handshake } from "lucide-react";
+import { Link } from "react-router";
 
 export function Partners() {
   const partners = [
@@ -52,12 +53,12 @@ export function Partners() {
             <li>Strengthen <strong>family-based care systems through integrating MHPSS</strong></li>
             <li>Support <strong>policy and care reform implementation.</strong></li>
           </ul>
-          <a
-            href="/contact"
+          <Link
+            to="/contact/"
             className="inline-flex items-center px-6 py-3 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors"
           >
             Get in Touch
-          </a>
+          </Link>
         </div>
       </div>
     </div>

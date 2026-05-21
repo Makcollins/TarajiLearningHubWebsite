@@ -9,7 +9,7 @@ import CountUp from 'react-countup';
 
 export function Home() {
   const stats = [
-    { icon: Users, value: 2150 , label: "Lives Impacted" },
+    { icon: Users, value: 2150, label: "Lives Impacted" },
     { icon: BookOpen, value: 50, label: "Workshops Conducted" },
     { icon: Heart, value: 20, label: "Counseling Sessions" },
     { icon: Award, value: 2, label: "Partner Organizations" },
@@ -62,13 +62,13 @@ export function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+              to="/contact/"
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-cyan-700 rounded-lg hover:bg-cyan-50 transition-colors"
             >
               Contact Us
             </Link>
             <Link
-              to="/services"
+              to="/our-services/"
               className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-cyan-700 transition-colors"
             >
               Learn More

@@ -1,59 +1,60 @@
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Calendar, MapPin } from "lucide-react";
 import { PhotoSlider } from "../components/PhotosSlider";
+import { Link } from "react-router";
 
 export function Gallery() {
   const galleryItems = [
     {
-      image: "https://i.ibb.co/tp2dnxqV/ay2.jpg",
+      image: "/gallery/ay2.jpg",
       title: "Youth Empowerment Workshop",
       date: "August 2026",
       location: "Kisii town"
     },
     {
-      image: "https://i.ibb.co/ch3hfgfX/gbvart2.jpg",
+      image: "/gallery/gbvart2.JPG",
       title: "Community Empowerment Workshop",
       date: "February 2026",
       location: "Local Community"
     },
     {
-      image: "https://i.ibb.co/pBYkVxN6/kcc-Youth1.jpg",
+      image: "/gallery/kccYouth1.JPG",
       title: "Play Therapy",
       date: "July 2025",
       location: "Kisii"
     },
     {
-      image: "https://i.ibb.co/xS0JmJ5z/lsa.jpg",
+      image: "/gallery/lsa.jpg",
       title: "Child Counselling",
       date: "October 2025",
       location: "Little Sunshine Academy"
     },
     {
-      image: "https://i.ibb.co/fdXTkFvk/tarajipaints.jpg",
+      image: "/gallery/tarajipaints.JPG",
       title: "Art Therapy",
       date: "October 2025",
       location: "Little Sunshine Academy"
     },
     {
-      image: "https://i.ibb.co/1GwsQPm1/tarajiteam.png",
+      image: "/gallery/tarajiteam.png",
       title: "Team Building Workshop",
       date: "June 2025",
       location: "Nyamira"
     },
     {
-      image: "https://i.ibb.co/Fb063R8p/taraji2.jpg",
+      image: "/gallery/taraji2.JPG",
       title: "Child Counselling",
       date: "October 2025",
       location: "Little Sunshine Academy"
     },
     {
-      image: "https://i.ibb.co/K8VtpQ4/tl2.jpg",
+      image: "/gallery/tl2.jpg",
       title: "Visit to Prison",
       date: "August 2024",
       location: "Kisii women prison"
     },
     {
-      image: "https://i.ibb.co/3y89bpbG/group.jpg",
+      image: "/gallery/group.JPG",
       title: "Team Building",
       date: "January 2026",
       location: "Kisii"
@@ -66,7 +67,7 @@ export function Gallery() {
       <div className="relative bg-gradient-to-br from-cyan-700 to-indigo-600 text-white py-20">
         <div className="absolute inset-0 overflow-hidden">
           <ImageWithFallback
-            src="https://i.ibb.co/W4M85Dms/lk.jpg"
+            src="/pages/lk.JPG"
             alt="Students learning"
             className="w-full h-full object-cover opacity-20"
           />
@@ -120,7 +121,7 @@ export function Gallery() {
           <h2 className="text-3xl font-bold text-white">
             More...
           </h2>
-            <PhotoSlider />
+          <PhotoSlider />
         </div>
       </div>
 
@@ -134,12 +135,13 @@ export function Gallery() {
           <p className="text-xl text-gray-600 mb-8">
             Every event brings us closer to our vision of a safer, healthier community. Join us in making a difference.
           </p>
-          <a
-            href="/contact"
+
+          <Link
+            to="/contact/"
             className="inline-flex items-center px-8 py-4 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors"
           >
             Get Involved
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import "./css/services.css";
 import { TypeAnimation } from "react-type-animation";
 import { ImplementationModel } from "../components/ImplementationModel";
+import { Link } from "react-router";
 
 // // const handleMouseEnter () => {
 
@@ -67,7 +68,7 @@ export function Services() {
       <div className="relative bg-gradient-to-br from-cyan-700 to-indigo-600 text-white py-5">
         <div className="absolute inset-0 overflow-hidden">
           <ImageWithFallback
-            src="https://i.ibb.co/W4M85Dms/lk.jpg"
+            src="/pages/lk.JPG"
             alt="Students learning"
             className="w-full h-full object-cover opacity-20"
           />
@@ -92,7 +93,7 @@ export function Services() {
             </div>
             <div className="growing-image rounded-xl overflow-hidden shadow-xl">
               <ImageWithFallback
-                src="https://i.ibb.co/WWM68Wp9/taraji-services.png"
+                src="/infographics/taraji-services.png"
                 alt="Taraji Lurning hub infographic"
                 className="w-full h-full object-cover"
               />
@@ -189,12 +190,19 @@ export function Services() {
             </p>
           </div>
           <div className="mt-12 text-center">
-            <a
+            <Link
+              to="/contact/"
+              className="inline-flex items-center px-8 py-4 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors"
+
+            >
+              Contact Us Today
+            </Link>
+            {/* <a
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors"
             >
               Contact Us Today
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

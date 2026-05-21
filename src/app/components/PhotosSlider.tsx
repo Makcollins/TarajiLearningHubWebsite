@@ -23,7 +23,7 @@ export function PhotoSlider() {
         "https://i.ibb.co/K8VtpQ4/tl2.jpg",
     ];
     var settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
