@@ -5,8 +5,8 @@ import { TypeAnimation } from 'react-type-animation';
 
 export function Hero() {
   return (
-    <div className="relative bg-gradient-to-br from-cyan-700 via-cyan-600 to-indigo-600 text-white">
-      <div className="absolute inset-0 overflow-hidden">
+    <div className="relative bg-gradient-to-br from-blue-950 via-blue-700 to-blue-400 text-white">
+      <div className="fixed top-0 inset-0 overflow-hidden">
         <ImageWithFallback
           src="/pages/lk.JPG"
           alt="Students learning"

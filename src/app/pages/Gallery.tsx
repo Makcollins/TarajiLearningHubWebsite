@@ -64,7 +64,7 @@ export function Gallery() {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-cyan-700 to-indigo-600 text-white py-20">
+      <div className="relative bg-gradient-to-br from-blue-950 via-blue-700 to-blue-400 text-white py-20">
         <div className="absolute inset-0 overflow-hidden">
           <ImageWithFallback
             src="/pages/lk.JPG"

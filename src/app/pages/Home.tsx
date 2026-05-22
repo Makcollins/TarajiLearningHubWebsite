@@ -20,7 +20,7 @@ export function Home() {
       <Hero />
 
       {/* Stats Section */}
-      <div className="py-16 bg-white">
+      <div className="py-16 bg-white backdrop-opacity-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
@@ -46,7 +46,7 @@ export function Home() {
       <Partners />
 
       {/* CTA Section */}
-      <div className="py-16 bg-gradient-to-br from-cyan-700 to-indigo-600 text-white">
+      <div className="py-16 bg-gradient-to-br from-cyan-700 to-indigo-600 backdrop-opacity-100 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-yellow-400">
             Ready to Make a Difference?

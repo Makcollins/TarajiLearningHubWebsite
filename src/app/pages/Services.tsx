@@ -65,8 +65,8 @@ export function Services() {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-cyan-700 to-indigo-600 text-white py-5">
-        <div className="absolute inset-0 overflow-hidden">
+      <div className="relative bg-gradient-to-br  from-blue-950 via-blue-700 to-blue-400from-cyan-700 to-indigo-600 text-white py-5">
+        <div className="fixed top-0 inset-0 overflow-hidden">
           <ImageWithFallback
             src="/pages/lk.JPG"
             alt="Students learning"
@@ -103,7 +103,7 @@ export function Services() {
       </div>
 
       {/* Services Grid */}
-      <div className="py-16 bg-gray-50">
+      <div className="py-16 bg-gray-50 backdrop-opacity-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => {
@@ -158,10 +158,11 @@ export function Services() {
           </div>
         </div>
       </div> */}
+
       <ImplementationModel />
 
       {/* How to Access Section */}
-      <div className="py-16 bg-white">
+      <div className="py-16 bg-white backdrop-opacity-100">
 
         <div className="">
           <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-8 text-center mb-12">

@@ -22,14 +22,14 @@ export function Infographics() {
 
   // Support Services Impact
   const impactData = [
-    { name: "Received Support", value: 70 },
-    { name: "No Support Yet", value: 30 },
+    { name: "Reported progress", value: 80 },
+    { name: "Not reported", value: 20 },
   ];
 
   const COLORS = ["#007595", "#d08700"];
 
   return (
-    <div className="py-16 bg-white">
+    <div className="py-16 bg-white backdrop-opacity-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -119,23 +119,24 @@ export function Infographics() {
 
         {/* Impact of Support Services */}
         <div>
-          <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-8">
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
               Our Impact
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div>
-                <ResponsiveContainer width="100%" height={300}>
+              <div className="w-full h-96">
+                <ResponsiveContainer>
                   <PieChart>
                     <Pie
                       data={impactData}
                       cx="50%"
                       cy="50%"
                       labelLine={false}
-                      label={({ name, value }) => `${name}: ${value}%`}
+                      // label={({ name, value }) => `${name}: ${value}%`}
                       outerRadius={100}
                       fill="#8884d8"
                       dataKey="value"
+                      animationDuration={500}
                     >
                       {impactData.map((entry, index) => (
                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
@@ -147,15 +148,15 @@ export function Infographics() {
               </div>
               <div className="space-y-4">
                 <div className="p-4 bg-white rounded-lg">
-                  <h4 className="font-bold text-lg text-gray-900 mb-2"><CountUp end={2150} duration={5}/>+</h4>
+                  <h4 className="font-bold text-lg text-gray-900 mb-2"><CountUp end={2150} duration={5} />+</h4>
                   <p className="text-gray-600">individuals reached in Kisii and Nyamira Counties through schools and community sessions.</p>
                 </div>
                 <div className="p-4 bg-white rounded-lg">
-                  <h4 className="font-bold text-lg text-gray-900 mb-2"><CountUp end={850} duration={5}/>+</h4>
+                  <h4 className="font-bold text-lg text-gray-900 mb-2"><CountUp end={850} duration={5} />+</h4>
                   <p className="text-gray-600">Participated in awareness workshops</p>
                 </div>
                 <div className="p-4 bg-white rounded-lg">
-                  <h4 className="font-bold text-lg text-gray-900 mb-2"><CountUp end={80} duration={5}/>%</h4>
+                  <h4 className="font-bold text-lg text-gray-900 mb-2"><CountUp end={80} duration={5} />%</h4>
                   <p className="text-gray-600">Reported improved well-being after support</p>
                 </div>
               </div>
@@ -164,7 +165,7 @@ export function Infographics() {
         </div>
         <div className="text-center mt-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-             KEY ACHIEVEMENTS (SINCE 2021)
+            KEY ACHIEVEMENTS (SINCE 2021)
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Delivering art and play therapy

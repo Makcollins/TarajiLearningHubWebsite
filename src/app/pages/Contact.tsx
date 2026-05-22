@@ -39,14 +39,14 @@ export function Contact() {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-cyan-700 to-indigo-600 text-white py-20">
-        <div className="absolute inset-0 overflow-hidden">
-                <ImageWithFallback
-                  src="/pages/lk.JPG"
-                  alt="Students learning"
-                  className="w-full h-full object-cover opacity-20"
-                />
-              </div>
+      <div className="relative bg-gradient-to-br from-blue-950 via-blue-700 to-blue-400 text-white py-20">
+        <div className="fixed top-0 inset-0 overflow-hidden">
+          <ImageWithFallback
+            src="/pages/lk.JPG"
+            alt="Students learning"
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-yellow-400">Contact Us</h1>
           <p className="text-xl from-cyan-100 max-w-3xl">
@@ -56,7 +56,7 @@ export function Contact() {
       </div>
 
       {/* Contact Information & Form */}
-      <div className="py-16 bg-gray-50">
+      <div className="py-16 bg-gray-50 backdrop-opacity-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Contact Information */}
@@ -137,7 +137,7 @@ export function Contact() {
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
                   Send Us a Message
                 </h2>
-                
+
                 {submitted ? (
                   <div className="bg-green-50 border-2 border-green-500 rounded-lg p-6 text-center">
                     <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">

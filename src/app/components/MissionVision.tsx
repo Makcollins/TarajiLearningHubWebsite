@@ -2,14 +2,14 @@ import { Target, Eye, Heart } from "lucide-react";
 
 export function MissionVision() {
   return (
-    <div className="py-16 bg-gradient-to-br from-cyan-50 to-yellow-50">
+    <div className="py-16 bg-gradient-to-br from-blue-700 to-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 animate-pulse">
+          <h2 className="text-3xl sm:text-4xl font-bold text-yellow-400 mb-4">
             Mission & Vision
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We are is dedicated to 
+          <p className="text-xl text-white max-w-3xl mx-auto">
+            We are dedicated to 
             advancing mental health and 
             psychosocial well-being among 
             vulnerable children, youths and 
@@ -21,13 +21,13 @@ export function MissionVision() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Mission */}
-          <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-            <div className="w-16 h-16 bg-gradient-to-br from-cyan-600 to-cyan-700 rounded-full flex items-center justify-center mb-6 mx-auto">
-              <Target className="text-white" size={32} />
+          <div className="bg-white backdrop-opacity-100 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="w-16 h-16 bg-gradient-to-br from-blue-700 to-black rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Target className="text-yellow-400" size={32} />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4 text-center">
               Our Mission
             </h3>
             <p className="text-gray-600 text-center">
@@ -36,11 +36,11 @@ export function MissionVision() {
           </div>
 
           {/* Vision */}
-          <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-            <div className="w-16 h-16 bg-gradient-to-br from-yellow-600 to-yellow-700 rounded-full flex items-center justify-center mb-6 mx-auto">
+          <div className="bg-white backdrop-opacity-100 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="w-16 h-16 bg-gradient-to-br from-blue-700 to-black rounded-full flex items-center justify-center mb-6 mx-auto">
               <Eye className="text-white" size={32} />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4 text-center">
               Our Vision
             </h3>
             <p className="text-gray-600 text-center">
@@ -49,17 +49,17 @@ export function MissionVision() {
           </div>
 
           {/* Values */}
-          {/* <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-            <div className="w-16 h-16 bg-gradient-to-br from-cyan-600 to-yellow-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+          <div className="bg-white backdrop-opacity-100 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="w-16 h-16 bg-gradient-to-br from-blue-700 to-black rounded-full flex items-center justify-center mb-6 mx-auto">
               <Heart className="text-white" size={32} />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4 text-center">
               Our Values
             </h3>
             <p className="text-gray-600 text-center">
-              Compassion, integrity, empowerment, inclusivity, and evidence-based practices guide everything we do. We believe in the dignity and potential of every person.
+              Hope, Social, equity, Inclusion & Justice for all.
             </p>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

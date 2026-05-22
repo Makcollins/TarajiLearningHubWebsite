@@ -28,7 +28,7 @@ export function Navigation() {
   };
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
+    <nav className="bg-blue-700 shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -37,7 +37,7 @@ export function Navigation() {
             <div className="w-10 h-10 flex items-center justify-center">
               <span className="text-white font-bold text-xl"><img src="/logo/taraji-3d.png" alt="" /></span>
             </div>
-            <span className="font-bold text-xl text-gray-900">
+            <span className="font-bold text-xl text-white">
               Taraji Learning Hub
             </span>
           </Link>
@@ -49,26 +49,26 @@ export function Navigation() {
                 key={link.path}
                 to={link.path}
                 className={`${isActive(link.path)
-                  ? "text-cyan-600 border-b-2 border-cyan-600"
-                  : "text-gray-700 hover:text-cyan-600"
+                  ? "text-yellow-400 font-bold border-b-2 border-yellow-300"
+                  : "text-white hover:text-yellow-400"
                   } transition-colors pb-1`}
               >
                 {link.label}
               </Link>
             ))}
             <div>
-              <div className={`flex items-center px-2 text-gray-700 hover:text-cyan-600`} 
+              <div className={`flex items-center px-2 text-white hover:text-yellow-400`} 
               onClick={()=>setMoreOpen(true)} onMouseEnter={()=>setMoreOpen(true)}>
                 More <FaAngleDown /></div>
-              <div className="absolute pb-2 @max-lg:right-0 bg-white" onMouseLeave={()=>setMoreOpen(false)}>
+              <div className="absolute pb-2 @max-lg:right-0 bg-blue-700" onMouseLeave={()=>setMoreOpen(false)}>
                { moreOpen && more_menu.map((link) => (
                   <Link
                     key={link.path}
                     to={link.path}
                     onClick={() => setMoreOpen(false)}
                     className={`block p-2 py-2 ${isActive(link.path)
-                      ? "text-cyan-600 bg-cyan-50"
-                      : "text-gray-700 hover:bg-gray-50"
+                      ? "text-yellow-400 bg-blue-800"
+                      : "text-white hover:bg-blue-800"
                       }`} 
                   >
                     {link.label}

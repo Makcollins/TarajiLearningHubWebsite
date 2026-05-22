@@ -31,7 +31,7 @@ export function About() {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-cyan-700 text-white to-indigo-600 py-5">
+      <div className="relative bg-gradient-to-br from-blue-950 via-blue-700 to-blue-400 py-5">
         <div className="absolute inset-0 overflow-hidden">
           <ImageWithFallback
             src="/pages/lk.JPG"
