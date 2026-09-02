@@ -4,17 +4,11 @@ import { Link } from "react-router";
 export function Partners() {
   const partners = [
     { name: "County government of Kisii", description: "County government of Kisii" , logo:"/partners/kisii-county.png"},
-    { name: "County government of Nyamira", description: "County governments of Nyamira", logo:"/partners/nyamira-county-logo.png"},
+    { name: "County government of Nyamira", description: "County government of Nyamira", logo:"/partners/nyamira-county-logo.png"},
     { name: "European Union", description: "European Union", logo:"/partners/european-union.png" },
     { name: "International Solidarity Foundation", description: "International Solidarity Foundation", logo:"/partners/international-solidarity-foundation-logo.png" },
     { name: "Kilimo Bora", description: "Kilimo Bora", logo:"/partners/kilimo-bora.png" },
     { name: "Victory Child Empowerment", description: "Victory Child Empowerment", logo:"/partners/vce.png" },
-    // { name: "UNICEF", description: "United Nations Children's Fund" },
-    // { name: "Global Mental Health", description: "Mental Health Alliance" },
-    // { name: "Women's Rights Foundation", description: "Empowerment & Advocacy" },
-    // { name: "Community Health Network", description: "Local Healthcare Partners" },
-    // { name: "Education for All", description: "Learning & Development" },
-    // { name: "Safe Spaces Initiative", description: "Protection & Support" },
   ];
 
   return (

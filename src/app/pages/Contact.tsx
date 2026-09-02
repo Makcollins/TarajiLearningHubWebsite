@@ -94,11 +94,11 @@ export function Contact() {
 
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <a href="mailto:info@tarajilearninghub.com"><Mail className="from-cyan-600" size={24} /></a>
+                      <a href="mailto:admintarajilearninghub@gmail.com"><Mail className="from-cyan-600" size={24} /></a>
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                      <p className="text-gray-600"><a href="mailto:info@tarajilearninghub.com">info@tarajilearninghub.com</a></p>
+                      <p className="text-gray-600"><a href="mailto:admintarajilearninghub@gmail.com">admintarajilearninghub@gmail.com</a></p>
                       {/* <p className="text-gray-600">support@tarajilearning.org</p> */}
                     </div>
                   </div>

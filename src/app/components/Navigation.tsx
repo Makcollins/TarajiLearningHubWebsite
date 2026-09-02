@@ -28,14 +28,14 @@ export function Navigation() {
   };
 
   return (
-    <nav className="bg-blue-700 shadow-md sticky top-0 z-50">
+    <nav className=" bg-gradient-to-b md:bg-gradient-to-r from-black md:via-blue-900 to-blue-950 md:to-blue-800 shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             {/* <div className="w-10 h-10 bg-gradient-to-br from-cyan-600 to-yellow-600 rounded-lg flex items-center justify-center"> */}
             <div className="w-10 h-10 flex items-center justify-center">
-              <span className="text-white font-bold text-xl"><img src="/logo/taraji-3d.png" alt="" /></span>
+              <span className="text-white"><img src="/logo/taraji-2b.png" alt="Taraji learning hub Logo" /></span>
             </div>
             <span className="font-bold text-xl text-white">
               Taraji Learning Hub
@@ -81,7 +81,7 @@ export function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100"
+            className="md:hidden p-2 rounded-md text-white hover:bg-gray-500"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -96,8 +96,8 @@ export function Navigation() {
                 to={link.path}
                 onClick={() => setIsOpen(false)}
                 className={`block py-2 px-4 ${isActive(link.path)
-                  ? "text-cyan-600 bg-cyan-50"
-                  : "text-gray-700 hover:bg-gray-50"
+                  ? "text-yellow-400 font-bold bg-blue-950"
+                  : "text-white hover:bg-gray-50"
                   }`}
               >
                 {link.label}
