@@ -17,6 +17,7 @@ export function Navigation() {
   const more_menu = [
     { path: "/gallery/", label: "Gallery" },
     { path: "/contact/", label: "Contact Us" },
+    { path: "/blogs", label: "Blogs" },
   ];
   const phone_menu = links.concat(more_menu);
 
