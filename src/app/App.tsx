@@ -9,6 +9,7 @@ import { Gallery } from "./pages/Gallery";
 import { Footer } from "./components/Footer";
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
 import Blogs from "./pages/Blogs";
+import BlogContent from './pages/BlogContent';
 
 export default function App() {
   // return <RouterProvider router={router} />;
@@ -23,6 +24,7 @@ export default function App() {
       <Route path='/contact/' element={<Contact />} />
       <Route path='/gallery/' element={<Gallery/>} />
       <Route path='/blogs' element={<Blogs/>} />
+      <Route path='/blogs/:slug' element={<BlogContent/>} />
     </Routes>
     <Footer />
   </BrowserRouter>
