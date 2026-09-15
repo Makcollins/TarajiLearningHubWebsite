@@ -11,6 +11,7 @@ import { FloatingWhatsApp } from 'react-floating-whatsapp';
 import Blogs from "./pages/Blogs";
 import BlogContent from './pages/BlogContent';
 
+
 export default function App() {
   // return <RouterProvider router={router} />;
   return <>

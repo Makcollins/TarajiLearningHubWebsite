@@ -1,8 +1,21 @@
 import React from 'react';
 import { Link } from "react-router";
 import { blogs } from "../data/data";
+import useFetch from '../hooks/useFetch'
 
 const Blogs = () => {
+      let {data, error, loading} = useFetch('http://localhost:1337/api/blogs')
+
+      if(loading){
+        return <div>
+            Loading...
+        </div>
+      }
+      if(error){
+        return <div>
+            error occured
+        </div>
+      }
     return (
         <div className="max-w-7xl mx-auto">
             <h1 className="text-2xl sm:text-3xl font-light text-gray-900 text-center">our Blogs</h1>
