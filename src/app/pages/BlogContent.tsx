@@ -2,9 +2,9 @@ import { useParams, Link } from 'react-router';
 import { blogs } from '../data/data';
 
 const BlogContent = () => {
-  const { slug } = useParams();
+  const { id } = useParams();
 
-  const blog = blogs.find(b => b.slug === slug);
+  const blog = blogs.find(b => b.id === Number(id));
 
   if (!blog) {
     return <div>
@@ -21,7 +21,7 @@ const BlogContent = () => {
           <p className=''>{blog.description}</p>
         </div>
         <div className='md:h-[400px] overflow-hidden'>
-          <img src={blog.coverImg} alt={slug} />
+          <img src={blog.coverImg} alt={id} />
         </div>
         <div className='max-w-6xl mx-auto mt-10 p-6'>
           <div>
