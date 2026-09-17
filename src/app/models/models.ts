@@ -1,4 +1,4 @@
-type Blog={
+export type Blog = {
     blogContent:any
     blogTitle:string
     coverImg:any

@@ -1,22 +1,22 @@
 import React from 'react';
 import { Link } from "react-router";
-import { blogs } from "../data/data";
 import useFetch from '../hooks/useFetch'
+import { BASE_URL } from '../api/apiblogs';
 
 const Blogs = () => {
-      let {data, error, loading} = useFetch('http://localhost:1337/api/blogs?populate=*')
-
+    // const BASE_URL = 'http://localhost:1337'
+const {data, loading, error} = useFetch();
       if(loading){
         return <div>
             Loading...
         </div>
       }
       if(error){
+        console.log(error)
         return <div>
             error occured
         </div>
       }
-      
       
     return (
         <div className="max-w-7xl mx-auto py-5">
@@ -27,7 +27,7 @@ const Blogs = () => {
                     <Link to={`/blogs/${blog.id}`}>
                         <div key={index} className='py-2 px-4 drop-shadow-md rounded-md bg-white overflow-hidden'>
                             <div className='rounded-md overflow-hidden'>
-                                <img src={blog.coverImg.url} alt={`${blog.coverImg.alternativeText} image`} />
+                                <img src={BASE_URL+blog.coverImg.url} alt={`${blog.coverImg.alternativeText} image`} />
                             </div>
                             <div className='py-2'>
                                 <h2 className='font-bold text-gray-900 mb-1 text-nowrap text-ellipsis'>{blog.blogTitle}</h2>

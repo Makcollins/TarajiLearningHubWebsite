@@ -1,3 +1,5 @@
+// const BASE_URL = 'http://localhost:1337/api/blogs';
+//       let {data, error, loading} = useFetch(`${BASE_URL}?populate=*`);
 export const blogs = [
     {
         id: 1,
