@@ -30,7 +30,7 @@ export default function App() {
     <Footer />
   </BrowserRouter>
   <FloatingWhatsApp 
-        phoneNumber="254745461993" // Required: Include country code without '+' or zeros
+        phoneNumber="254799815621" // Required: Include country code without '+' or zeros
         accountName="Taraji Learning Hub" 
         // allowClickOnEnter
         // rememberDelay

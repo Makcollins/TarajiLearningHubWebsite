@@ -1,10 +1,6 @@
 import { useParams, Link } from 'react-router';
 import useFetch from '../hooks/useFetch';
 import { BASE_URL } from '../api/apiblogs';
-// import {
-//   BlocksRenderer,
-//   type BlocksContent,
-// } from "@strapi/blocks-react-renderer";
 
 const BlogContent = () => {
   const {data:blogs, loading, error} = useFetch();

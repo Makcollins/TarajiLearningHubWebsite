@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 export function Partners() {
   const partners = [
-    { name: "County government of Kisii", description: "County government of Kisii" , logo:"/partners/kisii-county.png"},
+    { name: "County government of Kisii", description: "County government of Kisii" , logo:"/partners/kisii-county.png",},
     { name: "County government of Nyamira", description: "County government of Nyamira", logo:"/partners/nyamira-county-logo.png"},
     { name: "European Union", description: "European Union", logo:"/partners/european-union.png" },
     { name: "International Solidarity Foundation", description: "International Solidarity Foundation", logo:"/partners/international-solidarity-foundation-logo.png" },
@@ -33,10 +33,7 @@ export function Partners() {
               className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow"
             >
               <div className="h-32 w-32 rounded-full flex items-center justify-center mx-auto mb-4">
-                {/* <span className="text-2xl font-bold from-cyan-600">
-                  {partner.name.charAt(0)}
-                </span> */}
-                <img src={partner.logo} alt="" />
+                <img src={partner.logo} alt={`logo for ${partner.description}`} />
               </div>
               <h3 className="font-bold text-gray-900 mb-1">{partner.name}</h3>
               <p className="text-sm text-gray-600">{partner.description}</p>

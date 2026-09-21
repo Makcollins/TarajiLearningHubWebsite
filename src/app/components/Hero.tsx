@@ -9,7 +9,7 @@ export function Hero() {
       <div className="fixed top-0 inset-0 overflow-hidden">
         <ImageWithFallback
           src="/pages/lk.JPG"
-          alt="Students learning"
+          alt="image of a man drawing on a paper"
           className="w-full h-full object-cover opacity-20"
         />
       </div>
@@ -55,7 +55,7 @@ export function Hero() {
           <div className="rounded-xl overflow-visible mx-auto max-w-96 heroImg">
               <ImageWithFallback
                 src="infographics/healing-art.png"
-                alt="Community workshop"
+                alt="art illustration of an african woman getting healing from stress by painting."
                 className="w-full h-full object-cover"
               />
             </div>

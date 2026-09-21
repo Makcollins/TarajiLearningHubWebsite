@@ -9,22 +9,26 @@ export function About() {
     {
       name: "Joseph Onyonka",
       role: "C.E.O. / Mental Health Educator",
-      image: "/team/joseph.png"
+      image: "/team/joseph.png",
+      alt: "Profile image of Joseph Onyonka, a Mental Health Educator at Taraji"
     },
     {
       name: "Cliff Omayio",
       role: "Education Specialist",
-      image: "/team/cliff.jpg"
+      image: "/team/cliff.jpg",
+      alt: "Profile image of Cliff Omayio, an Education specialist at Taraji"
     },
     {
       name: "Lanith Juma",
       role: "IT Specialist",
-      image: "/team/jumataraji.jpg"
+      image: "/team/jumataraji.jpg",
+      alt: "Profile image of Lanith Juma, an IT specialist at Taraji"
     },
     {
       name: "Bridget Kamau",
       role: "Education Specialist",
-      image: "/team/bridget.jpg"
+      image: "/team/bridget.jpg",
+      alt: "Profile image of Bridget Kamau, an Education specialist at Taraji"
     },
   ];
 
@@ -183,7 +187,7 @@ export function About() {
                 <div className="aspect-square overflow-hidden">
                   <ImageWithFallback
                     src={member.image}
-                    alt={member.name}
+                    alt={`image of ${member.name}`}
                     className="w-full h-full object-cover"
                   />
                 </div>

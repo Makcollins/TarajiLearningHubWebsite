@@ -66,29 +66,15 @@ export function Contact() {
                   Get in Touch
                 </h2>
                 <div className="space-y-4">
-                  {/* <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="from-cyan-600" size={24} />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
-                      <p className="text-gray-600">
-                        123 Learning Street<br />
-                        Education City, EC 12345
-                      </p>
-                    </div>
-                  </div> */}
-
+                  
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <a href="https://wa.me/254745461993"><Phone className="from-cyan-600" size={24} /></a>
+                      <a href="https://wa.me/254799815621"><Phone className="from-cyan-600" size={24} /></a>
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                      <p className="text-gray-600"><a href="https://wa.me/254745461993">+254 745 461993</a></p>
-                      {/* <p className="text-sm from-cyan-600 font-semibold mt-1">
-                        Crisis Hotline: 1-800-HELP-NOW
-                      </p> */}
+                      <p className="text-gray-600"><a href="https://wa.me/254799815621">+254 799 815621</a></p>
+                     
                     </div>
                   </div>
 
@@ -121,14 +107,6 @@ export function Contact() {
                 </div>
               </div>
 
-              {/* Emergency Banner */}
-              {/* <div className="bg-gradient-to-br from-red-600 to-orange-600 text-white rounded-xl p-6 shadow-lg">
-                <h3 className="font-bold text-lg mb-2">Need Immediate Help?</h3>
-                <p className="text-sm mb-4 text-red-100">
-                  If you or someone you know is in immediate danger, please call emergency services or our 24/7 crisis hotline.
-                </p>
-                <div className="font-bold text-xl">1-800-HELP-NOW</div>
-              </div> */}
             </div>
 
             {/* Contact Form */}
@@ -268,17 +246,6 @@ export function Contact() {
         </div>
       </div>
 
-      {/* Map Section */}
-      {/* <div className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Visit Us
-          </h2>
-          <div className="bg-gray-200 rounded-xl overflow-hidden shadow-lg h-96 flex items-center justify-center">
-            <p className="text-gray-500">Map integration would go here</p>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }

@@ -55,69 +55,7 @@ export function Infographics() {
             into families and communities.
           </p>
         </div>
-
-        {/* Gender-Based Violence Section */}
-        {/* <div className="mb-16">
-          <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl p-8">
-            <div className="flex items-center gap-3 mb-6">
-              <AlertCircle className="text-red-600" size={32} />
-              <h3 className="text-2xl font-bold text-gray-900">
-                Gender-Based Violence Statistics
-              </h3>
-            </div>
-            <p className="text-gray-700 mb-8">
-              Prevalence of different types of gender-based violence affecting women globally
-            </p>
-            <ResponsiveContainer width="100%" height={300}>
-              <BarChart data={gbvData}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="category" />
-                <YAxis label={{ value: 'Percentage (%)', angle: -90, position: 'insideLeft' }} />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="percentage" fill="#dc2626" name="Affected (%)" />
-              </BarChart>
-            </ResponsiveContainer>
-            <div className="mt-6 p-4 bg-white rounded-lg">
-              <p className="text-sm text-gray-600">
-                <strong>Note:</strong> These statistics represent global averages. Gender-based violence affects 1 in 3 women worldwide, making awareness and prevention critical.
-              </p>
-            </div>
-          </div>
-        </div> */}
-
-        {/* Mental Health Section */}
-        {/* <div className="mb-16">
-          <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-8">
-            <div className="flex items-center gap-3 mb-6">
-              <TrendingUp className="text-cyan-600" size={32} />
-              <h3 className="text-2xl font-bold text-gray-900">
-                Mental Health Awareness
-              </h3>
-            </div>
-            <p className="text-gray-700 mb-8">
-              Mental health challenges by age group and help-seeking behavior
-            </p>
-            <ResponsiveContainer width="100%" height={300}>
-              <LineChart data={mentalHealthData}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="age" />
-                <YAxis label={{ value: 'Percentage (%)', angle: -90, position: 'insideLeft' }} />
-                <Tooltip />
-                <Legend />
-                <Line type="monotone" dataKey="affected" stroke="#9333ea" strokeWidth={3} name="Experiencing Mental Health Issues (%)" />
-                <Line type="monotone" dataKey="seekHelp" stroke="#ec4899" strokeWidth={3} name="Seeking Professional Help (%)" />
-              </LineChart>
-            </ResponsiveContainer>
-            <div className="mt-6 p-4 bg-white rounded-lg">
-              <p className="text-sm text-gray-600">
-                <strong>Key Insight:</strong> While mental health challenges are prevalent across all age groups, there's a significant gap between those affected and those seeking help. Our programs aim to bridge this gap.
-              </p>
-            </div>
-          </div>
-        </div> */}
-
-        {/* Impact of Support Services */}
+      
         <div>
           <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
