@@ -2,8 +2,19 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { TypeAnimation } from 'react-type-animation';
+import { Cloudinary} from "@cloudinary/url-gen";
+import { AdvancedImage } from '@cloudinary/react';
 
 export function Hero() {
+
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: 'xnlxwmb1'
+    }
+  });
+
+  const myImage = cld.image('healing-art')
+
   return (
     <div className="relative bg-gradient-to-br from-blue-950 via-blue-700 to-blue-400 text-white">
       <div className="fixed top-0 inset-0 overflow-hidden">
@@ -53,11 +64,12 @@ export function Hero() {
             </div>
           </div>
           <div className="rounded-xl overflow-visible mx-auto max-w-96 heroImg">
-              <ImageWithFallback
+              {/* <ImageWithFallback
                 src="infographics/healing-art.png"
                 alt="art illustration of an african woman getting healing from stress by painting."
                 className="w-full h-full object-cover"
-              />
+              /> */}
+              <AdvancedImage cldImg={myImage} />
             </div>
         </div>
       </div>
