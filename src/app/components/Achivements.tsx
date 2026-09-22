@@ -1,13 +1,8 @@
 import { BookOpen, Globe, Heart, Users } from "lucide-react";
 import CountUp from "react-countup";
+import {achievements} from "../data/data";
 
 export function Achievements(){
-    const achievements = [
-    { icon: Users, value: 2150, label: "Lives Impacted" },
-    { icon: BookOpen, value: 50, label: "Workshops Conducted" },
-    { icon: Heart, value: 20, label: "Counseling Sessions" },
-    { icon: Globe, value: 3, label: "Counties reached" }
-  ];
 
     return(
         <div id="impact" className="py-16 bg-white">

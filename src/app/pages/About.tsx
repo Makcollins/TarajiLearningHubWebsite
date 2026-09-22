@@ -3,45 +3,26 @@ import { Users, Award, Globe, Target, BookOpen, Heart, TicketCheck, ArrowBigDown
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import CountUp from "react-countup";
 import { Achievements } from "../components/Achivements";
+import {teamMembers} from "../data/data"
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from '@cloudinary/react';
 
 export function About() {
-  const teamMembers = [
-    {
-      name: "Joseph Onyonka",
-      role: "C.E.O. / Mental Health Educator",
-      image: "/team/joseph.png",
-      alt: "Profile image of Joseph Onyonka, a Mental Health Educator at Taraji"
-    },
-    {
-      name: "Cliff Omayio",
-      role: "Education Specialist",
-      image: "/team/cliff.jpg",
-      alt: "Profile image of Cliff Omayio, an Education specialist at Taraji"
-    },
-    {
-      name: "Lanith Juma",
-      role: "IT Specialist",
-      image: "/team/jumataraji.jpg",
-      alt: "Profile image of Lanith Juma, an IT specialist at Taraji"
-    },
-    {
-      name: "Bridget Kamau",
-      role: "Education Specialist",
-      image: "/team/bridget.jpg",
-      alt: "Profile image of Bridget Kamau, an Education specialist at Taraji"
-    },
-  ];
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: 'xnlxwmb1'
+    }
+  });
 
   return (
     <div>
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-blue-950 via-blue-700 to-blue-400 py-5">
         <div className="absolute inset-0 overflow-hidden">
-          <ImageWithFallback
-            src="/pages/lk.JPG"
-            alt="Students learning"
-            className="w-full h-full object-cover opacity-20"
-          />
+          <AdvancedImage className="w-full h-full object-cover opacity-20"
+          cldImg={cld.image('lk')}
+          alt="image of a man drawing on a paper"
+        />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -132,11 +113,12 @@ export function About() {
               </div>
             </div>
             <div className="rounded-xl overflow-hidden h-full shadow-xl heroImg">
-              <ImageWithFallback
-                src="/gallery/tarajipaints.JPG"
-                alt="Community workshop"
-                className="w-full h-full object-cover"
-              />
+             
+              <AdvancedImage 
+              className="w-full h-full object-cover"
+          cldImg={cld.image('tarajipaints')}
+          alt="Hands picking cyon paints from a transparent tin"
+        />
             </div>
           </div>
         </div>
@@ -185,11 +167,11 @@ export function About() {
             {teamMembers.map((member, index) => (
               <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <div className="aspect-square overflow-hidden">
-                  <ImageWithFallback
-                    src={member.image}
-                    alt={`image of ${member.name}`}
-                    className="w-full h-full object-cover"
-                  />
+                  
+                  <AdvancedImage className="w-full h-full object-cover opacity-20"
+          cldImg={cld.image(`${member.image}`)}
+          alt={`image of ${member.name}`}
+        />
                 </div>
                 <div className="p-6 text-center">
                   <h3 className="font-bold text-lg text-gray-900 mb-1">

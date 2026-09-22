@@ -1,5 +1,108 @@
-// const BASE_URL = 'http://localhost:1337/api/blogs';
-//       let {data, error, loading} = useFetch(`${BASE_URL}?populate=*`);
+// import { BookOpen, Globe, Heart, Users } from "lucide-react";
+import { BookOpen, Globe, Heart, Brain, Shield, BookOpen, Users, Heart, MessageCircle, GraduationCap, Phone } from "lucide-react";
+export const teamMembers = [
+    {
+      name: "Joseph Onyonka",
+      role: "C.E.O. / Mental Health Educator",
+      image: "joseph",
+      alt: "Profile image of Joseph Onyonka, a Mental Health Educator at Taraji"
+    },
+    {
+      name: "Cliff Omayio",
+      role: "Education Specialist",
+      image: "cliff",
+      alt: "Profile image of Cliff Omayio, an Education specialist at Taraji"
+    },
+    {
+      name: "Lanith Juma",
+      role: "IT Specialist",
+      image: "jumataraji",
+      alt: "Profile image of Lanith Juma, an IT specialist at Taraji"
+    },
+    {
+      name: "Bridget Kamau",
+      role: "Education Specialist",
+      image: "bridget",
+      alt: "Profile image of Bridget Kamau, an Education specialist at Taraji"
+    },
+  ];
+
+export const services = [
+    {
+      icon: Brain,
+      title: "Mental Health & Psychosocial Support (MHPSS)",
+      description: ` We provide a safe harbor for emotional recovery through diverse therapeutic paths. 
+      From Art & Play Therapy and professional Individual and Group Counseling 
+      to our innovative Sustainable Textile Initiative,
+      we integrate creative healing to help individuals process trauma and build coping skills..`,
+      features: []
+    },
+    {
+      icon: BookOpen,
+      title: "Trauma-Informed Education",
+      description: `Sustainable healing happens within a supported community. 
+      We empower the foundation of the home through Trauma-Informed Parenting programs and 
+      dedicated support for caregivers, children in CCIs, and reintegrated families, 
+      ensuring a stable environment for growth`,
+      features: []
+    },
+    {
+      icon: Shield,
+      title: "Child Protection & Safeguarding",
+      description: `We are committed to the safety and rights of every child. 
+      Our experts work to strengthen protection systems and facilitate safe reintegration, 
+      while simultaneously building robust mental health referral networks to ensure seamless access to care.`,
+      features: []
+    },
+    {
+      icon: BookOpen,
+      title: "Capacity Strengthening",
+      description: `Empowering the community to lead the way. 
+      We transform child welfare by providing essential trauma-informed training to caregivers, social workers, 
+      and community leaders. Our mission is to close the knowledge gap, 
+      ensuring professional-grade support is available at every level of a child's life.`,
+      features: []
+    },
+    {
+      icon: GraduationCap,
+      title: "Knowledge Development",
+      description: `To ensure our impact is lasting and scalable, we bridge practice with theory. 
+      We conduct in-depth MHPSS research and situational analysis and 
+      develop specialized manuals and handbooks that serve as blueprints 
+      for high-quality, scalable interventions across the sector`,
+      features: []
+    }];
+export const achievements = [
+    { icon: Users, value: 2150, label: "Lives Impacted" },
+    { icon: BookOpen, value: 50, label: "Workshops Conducted" },
+    { icon: Heart, value: 20, label: "Counseling Sessions" },
+    { icon: Globe, value: 3, label: "Counties reached" }
+];
+
+//region infographics 
+// Gender-Based Violence Statistics
+export const gbvData = [
+    { category: "Physical Violence", percentage: 35 },
+    { category: "Emotional Abuse", percentage: 43 },
+    { category: "Sexual Violence", percentage: 27 },
+    { category: "Economic Abuse", percentage: 22 },
+  ];
+
+  // Mental Health Statistics
+ export const mentalHealthData = [
+    { age: "18-25", affected: 28, seekHelp: 15 },
+    { age: "26-35", affected: 32, seekHelp: 18 },
+    { age: "36-45", affected: 25, seekHelp: 12 },
+    { age: "46-55", affected: 20, seekHelp: 10 },
+    { age: "56+", affected: 15, seekHelp: 8 },
+  ];
+
+  // Support Services Impact
+ export const impactData = [
+    { name: "Reported progress", value: 80 },
+    { name: "Not reported", value: 20 },
+  ];
+
 export const blogs = [
     {
         id: 1,

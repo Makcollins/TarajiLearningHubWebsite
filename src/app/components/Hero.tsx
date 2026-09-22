@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { TypeAnimation } from 'react-type-animation';
-import { Cloudinary} from "@cloudinary/url-gen";
+import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedImage } from '@cloudinary/react';
 
 export function Hero() {
@@ -13,15 +13,12 @@ export function Hero() {
     }
   });
 
-  const myImage = cld.image('healing-art')
-
   return (
     <div className="relative bg-gradient-to-br from-blue-950 via-blue-700 to-blue-400 text-white">
       <div className="fixed top-0 inset-0 overflow-hidden">
-        <ImageWithFallback
-          src="/pages/lk.JPG"
+        <AdvancedImage className="w-full h-full object-cover opacity-20"
+          cldImg={cld.image('lk')}
           alt="image of a man drawing on a paper"
-          className="w-full h-full object-cover opacity-20"
         />
       </div>
 
@@ -34,17 +31,14 @@ export function Hero() {
                 sequence={[
                   'Healing Minds.',
                   1000,
-                  'Healing Minds. Restoring Hope.', //  Continuing previous Text
+                  'Healing Minds. Restoring Hope.',
                   1000,
                   'Healing Minds. Restoring Hope. Building Resilient Futures',
-                  5000,
-                  '',
                 ]}
-                // style={{ fontSize: '2em' }}
-                repeat={Infinity}
+                repeat={0}
               />
             </h1>
-            <p className="text-xl sm:text-2xl text-yellow-400 mb-8 animate-pulse">
+            <p className="text-xl sm:text-2xl text-yellow-400 mb-8">
               Taraji Learning Hub
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -64,13 +58,12 @@ export function Hero() {
             </div>
           </div>
           <div className="rounded-xl overflow-visible mx-auto max-w-96 heroImg">
-              {/* <ImageWithFallback
-                src="infographics/healing-art.png"
-                alt="art illustration of an african woman getting healing from stress by painting."
-                className="w-full h-full object-cover"
-              /> */}
-              <AdvancedImage cldImg={myImage} />
-            </div>
+            <AdvancedImage cldImg={cld.image('healing-art')}
+              alt={`A Black woman smiling serenely as she paints a canvas, 
+              transitioning a dark, stormy landscape on the left into a bright, 
+              colorful scene filled with sunshine, 
+            flowers, and butterflies on the right.`} />
+          </div>
         </div>
       </div>
     </div>

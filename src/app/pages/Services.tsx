@@ -4,74 +4,28 @@ import "./css/services.css";
 import { TypeAnimation } from "react-type-animation";
 import { ImplementationModel } from "../components/ImplementationModel";
 import { Link } from "react-router";
-
-// // const handleMouseEnter () => {
-
-// }
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from '@cloudinary/react';
+import {services} from '../data/data'
 
 export function Services() {
-  const services = [
-    {
-      icon: Brain,
-      title: "Mental Health & Psychosocial Support (MHPSS)",
-      description: ` We provide a safe harbor for emotional recovery through diverse therapeutic paths. 
-      From Art & Play Therapy and professional Individual and Group Counseling 
-      to our innovative Sustainable Textile Initiative,
-      we integrate creative healing to help individuals process trauma and build coping skills..`,
-      features: []
-    },
-    {
-      icon: BookOpen,
-      title: "Trauma-Informed Education",
-      description: `Sustainable healing happens within a supported community. 
-      We empower the foundation of the home through Trauma-Informed Parenting programs and 
-      dedicated support for caregivers, children in CCIs, and reintegrated families, 
-      ensuring a stable environment for growth`,
-      features: []
-    },
-    {
-      icon: Shield,
-      title: "Child Protection & Safeguarding",
-      description: `We are committed to the safety and rights of every child. 
-      Our experts work to strengthen protection systems and facilitate safe reintegration, 
-      while simultaneously building robust mental health referral networks to ensure seamless access to care.`,
-      features: []
-    },
-    {
-      icon: BookOpen,
-      title: "Capacity Strengthening",
-      description: `Empowering the community to lead the way. 
-      We transform child welfare by providing essential trauma-informed training to caregivers, social workers, 
-      and community leaders. Our mission is to close the knowledge gap, 
-      ensuring professional-grade support is available at every level of a child's life.`,
-      features: []
-    },
-    {
-      icon: GraduationCap,
-      title: "Knowledge Development",
-      description: `To ensure our impact is lasting and scalable, we bridge practice with theory. 
-      We conduct in-depth MHPSS research and situational analysis and 
-      develop specialized manuals and handbooks that serve as blueprints 
-      for high-quality, scalable interventions across the sector`,
-      features: []
-    },
-    // {
-    //   icon: GraduationCap,
-    //   title: "Advancing Knowledge & Capacity.Helpline Services",
-    //   description: "Preventing future violence through education, community engagement and promoting gender equality for survivors.",
-    // }
-  ];
 
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: 'xnlxwmb1'
+    }
+  });
+
+  
   return (
     <div>
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br  from-blue-950 via-blue-700 to-blue-400from-cyan-700 to-indigo-600 text-white py-5">
         <div className="fixed top-0 inset-0 overflow-hidden">
-          <ImageWithFallback
-            src="/pages/lk.JPG"
-            alt="Students learning"
-            className="w-full h-full object-cover opacity-20"
-          />
+                   <AdvancedImage className="w-full h-full object-cover opacity-20"
+          cldImg={cld.image('lk')}
+          alt="image of a man drawing on a paper"
+        />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -92,11 +46,11 @@ export function Services() {
               </p>
             </div>
             <div className="growing-image rounded-xl overflow-hidden shadow-xl">
-              <ImageWithFallback
-                src="/infographics/taraji-services.png"
-                alt="Taraji Lurning hub infographic"
-                className="w-full h-full object-cover"
-              />
+              <AdvancedImage 
+              className="w-full h-full object-cover"
+          cldImg={cld.image('taraji-services')}
+          alt="Taraji Lurning hub infographic"
+        />
             </div>
           </div>
         </div>

@@ -1,30 +1,9 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line } from "recharts";
 import { AlertCircle, TrendingUp } from "lucide-react";
 import CountUp from "react-countup";
+import {gbvData,mentalHealthData, impactData} from "../data/data";
 
 export function Infographics() {
-  // Gender-Based Violence Statistics
-  const gbvData = [
-    { category: "Physical Violence", percentage: 35 },
-    { category: "Emotional Abuse", percentage: 43 },
-    { category: "Sexual Violence", percentage: 27 },
-    { category: "Economic Abuse", percentage: 22 },
-  ];
-
-  // Mental Health Statistics
-  const mentalHealthData = [
-    { age: "18-25", affected: 28, seekHelp: 15 },
-    { age: "26-35", affected: 32, seekHelp: 18 },
-    { age: "36-45", affected: 25, seekHelp: 12 },
-    { age: "46-55", affected: 20, seekHelp: 10 },
-    { age: "56+", affected: 15, seekHelp: 8 },
-  ];
-
-  // Support Services Impact
-  const impactData = [
-    { name: "Reported progress", value: 80 },
-    { name: "Not reported", value: 20 },
-  ];
 
   const COLORS = ["#007595", "#d08700"];
 
