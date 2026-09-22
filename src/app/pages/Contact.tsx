@@ -99,9 +99,7 @@ export function Contact() {
                         Sunday - Friday: 9:00 AM - 5:00 PM<br />
                         Saturday: Closed
                       </p>
-                      {/* <p className="text-sm from-cyan-600 font-semibold mt-1">
-                        Emergency services available 24/7
-                      </p> */}
+    
                     </div>
                   </div>
                 </div>

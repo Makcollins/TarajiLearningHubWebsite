@@ -32,8 +32,6 @@ export default function App() {
   <FloatingWhatsApp 
         phoneNumber="254799815621" // Required: Include country code without '+' or zeros
         accountName="Taraji Learning Hub" 
-        // allowClickOnEnter
-        // rememberDelay
         avatar="/logo/taraji-golden.png"
         notification
         notificationSound

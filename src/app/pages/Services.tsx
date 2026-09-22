@@ -123,42 +123,13 @@ export function Services() {
                   <p className="text-gray-600 mb-6">
                     {service.description}
                   </p>
-                  <ul className="space-y-2">
-                    {/* {service.features.map((feature, fIndex) => (
-                      <li key={fIndex} className="flex items-center gap-2 text-gray-700">
-                        <div className="w-1.5 h-1.5 bg-cyan-600 rounded-full"></div>
-                        {feature}
-                      </li>
-                    ))} */}
-                  </ul>
+                  
                 </div>
               );
             })}
           </div>
         </div>
       </div>
-
-      {/* Emergency Contact Section */}
-      {/* <div className="py-16 bg-gradient-to-br from-red-600 to-orange-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Need Immediate Help?</h2>
-          <p className="text-xl mb-8 text-red-100">
-            Our 24/7 crisis helpline is always available for anyone in need of urgent support
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <div className="flex items-center gap-3 text-2xl font-bold">
-              <Phone size={32} />
-              <span>1-800-HELP-NOW</span>
-            </div>
-            <div className="text-red-100">or</div>
-            <div className="flex items-center gap-3 text-2xl font-bold">
-              <MessageCircle size={32} />
-              <span>Text "HELP" to 555-123</span>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       <ImplementationModel />
 
       {/* How to Access Section */}
@@ -198,12 +169,6 @@ export function Services() {
             >
               Contact Us Today
             </Link>
-            {/* <a
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors"
-            >
-              Contact Us Today
-            </a> */}
           </div>
         </div>
       </div>
