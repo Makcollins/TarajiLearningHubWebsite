@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import BgImage from "../components/BgImage";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -40,13 +41,7 @@ export function Contact() {
     <div>
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-blue-950 via-blue-700 to-blue-400 text-white py-20">
-        <div className="fixed top-0 inset-0 overflow-hidden">
-          <ImageWithFallback
-            src="/pages/lk.JPG"
-            alt="Students learning"
-            className="w-full h-full object-cover opacity-20"
-          />
-        </div>
+        <BgImage/>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-yellow-400">Contact Us</h1>
           <p className="text-xl from-cyan-100 max-w-3xl">

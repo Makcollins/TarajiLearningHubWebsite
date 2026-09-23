@@ -1,12 +1,13 @@
 import { Brain, Shield, BookOpen, Users, Heart, MessageCircle, GraduationCap, Phone } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import "./css/services.css";
+// import "./css/services.css";
 import { TypeAnimation } from "react-type-animation";
 import { ImplementationModel } from "../components/ImplementationModel";
 import { Link } from "react-router";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedImage } from '@cloudinary/react';
-import {services} from '../data/data'
+import { services } from '../data/data'
+import BgImage from "../components/BgImage";
 
 export function Services() {
 
@@ -16,17 +17,13 @@ export function Services() {
     }
   });
 
-  
+
   return (
     <div>
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br  from-blue-950 via-blue-700 to-blue-400from-cyan-700 to-indigo-600 text-white py-5">
-        <div className="fixed top-0 inset-0 overflow-hidden">
-                   <AdvancedImage className="w-full h-full object-cover opacity-20"
-          cldImg={cld.image('lk')}
-          alt="image of a man drawing on a paper"
-        />
-        </div>
+        <BgImage />
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -39,18 +36,18 @@ export function Services() {
                     From Mental Health & Psychosocial Support, Trauma-Informed Education to Knowledge Development, 
                     researching and creating the manuals that define the future of mental health and social protection systems.`,
                   ]}
-                  // style={{ fontSize: '2em' }}
                   repeat={1}
                 />
-
               </p>
             </div>
             <div className="growing-image rounded-xl overflow-hidden shadow-xl">
-              <AdvancedImage 
-              className="w-full h-full object-cover"
-          cldImg={cld.image('taraji-services')}
-          alt="Taraji Lurning hub infographic"
-        />
+              <AdvancedImage
+                className="w-full h-full object-cover"
+                cldImg={cld.image('taraji-services')}
+                alt={`An infographic outlining four core service pillars of Taraji Learning Hub: 
+                  Mental Health & Psychosocial Support, Family & Caregiver Support, 
+                  Child Protection & Safeguarding, and Knowledge & Research Development.`}
+              />
             </div>
           </div>
         </div>
@@ -77,7 +74,7 @@ export function Services() {
                   <p className="text-gray-600 mb-6">
                     {service.description}
                   </p>
-                  
+
                 </div>
               );
             })}

@@ -1,16 +1,15 @@
 import { Handshake } from "lucide-react";
 import { Link } from "react-router";
+import { partners } from "../data/data"
+import { Cloudinary } from "@cloudinary/url-gen/index";
+import { AdvancedImage } from '@cloudinary/react';
 
 export function Partners() {
-  const partners = [
-    { name: "County government of Kisii", description: "County government of Kisii" , logo:"/partners/kisii-county.png",},
-    { name: "County government of Nyamira", description: "County government of Nyamira", logo:"/partners/nyamira-county-logo.png"},
-    { name: "European Union", description: "European Union", logo:"/partners/european-union.png" },
-    { name: "International Solidarity Foundation", description: "International Solidarity Foundation", logo:"/partners/international-solidarity-foundation-logo.png" },
-    { name: "Kilimo Bora", description: "Kilimo Bora", logo:"/partners/kilimo-bora.png" },
-    { name: "Victory Child Empowerment", description: "Victory Child Empowerment", logo:"/partners/vce.png" },
-  ];
-
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: 'xnlxwmb1'
+    }
+  });
   return (
     <div className="py-16 bg-gray-50 backdrop-opacity-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,7 +32,10 @@ export function Partners() {
               className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow"
             >
               <div className="h-32 w-32 rounded-full flex items-center justify-center mx-auto mb-4">
-                <img src={partner.logo} alt={`logo for ${partner.description}`} />
+                <AdvancedImage
+                  cldImg={cld.image(`${partner.logo}`)}
+                  alt={`logo for ${partner.name}`}
+                />
               </div>
               <h3 className="font-bold text-gray-900 mb-1">{partner.name}</h3>
               <p className="text-sm text-gray-600">{partner.description}</p>

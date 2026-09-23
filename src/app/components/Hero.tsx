@@ -4,6 +4,7 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { TypeAnimation } from 'react-type-animation';
 import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedImage } from '@cloudinary/react';
+import BgImage from "./BgImage";
 
 export function Hero() {
 
@@ -15,12 +16,7 @@ export function Hero() {
 
   return (
     <div className="relative bg-gradient-to-br from-blue-950 via-blue-700 to-blue-400 text-white">
-      <div className="fixed top-0 inset-0 overflow-hidden">
-        <AdvancedImage className="w-full h-full object-cover opacity-20"
-          cldImg={cld.image('lk')}
-          alt="image of a man drawing on a paper"
-        />
-      </div>
+      <BgImage/>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-2">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

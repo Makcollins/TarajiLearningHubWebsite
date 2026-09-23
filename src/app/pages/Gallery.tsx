@@ -2,76 +2,17 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Calendar, MapPin } from "lucide-react";
 import { PhotoSlider } from "../components/PhotosSlider";
 import { Link } from "react-router";
+import BgImage from "../components/BgImage";
+import {galleryItems, cld} from "../data/data";
+import { AdvancedImage } from "@cloudinary/react";
 
 export function Gallery() {
-  const galleryItems = [
-    {
-      image: "/gallery/ay2.jpg",
-      title: "Youth Empowerment Workshop",
-      date: "August 2026",
-      location: "Kisii town"
-    },
-    {
-      image: "/gallery/gbvart2.JPG",
-      title: "Community Empowerment Workshop",
-      date: "February 2026",
-      location: "Local Community"
-    },
-    {
-      image: "/gallery/kccYouth1.JPG",
-      title: "Play Therapy",
-      date: "July 2025",
-      location: "Kisii"
-    },
-    {
-      image: "/gallery/lsa.jpg",
-      title: "Child Counselling",
-      date: "October 2025",
-      location: "Little Sunshine Academy"
-    },
-    {
-      image: "/gallery/tarajipaints.JPG",
-      title: "Art Therapy",
-      date: "October 2025",
-      location: "Little Sunshine Academy"
-    },
-    {
-      image: "/gallery/tarajiteam.png",
-      title: "Team Building Workshop",
-      date: "June 2025",
-      location: "Nyamira"
-    },
-    {
-      image: "/gallery/taraji2.JPG",
-      title: "Child Counselling",
-      date: "October 2025",
-      location: "Little Sunshine Academy"
-    },
-    {
-      image: "/gallery/tl2.jpg",
-      title: "Visit to Prison",
-      date: "August 2024",
-      location: "Kisii women prison"
-    },
-    {
-      image: "/gallery/group.JPG",
-      title: "Team Building",
-      date: "January 2026",
-      location: "Kisii"
-    }
-  ];
 
   return (
     <div>
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-blue-950 via-blue-700 to-blue-400 text-white py-20">
-        <div className="absolute inset-0 overflow-hidden">
-          <ImageWithFallback
-            src="/pages/lk.JPG"
-            alt="Students learning"
-            className="w-full h-full object-cover opacity-20"
-          />
-        </div>
+        <BgImage/>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-yellow-400">Gallery</h1>
           <p className="text-xl from-cyan-100 max-w-3xl">
@@ -90,11 +31,15 @@ export function Gallery() {
                 className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300"
               >
                 <div className="aspect-[4/3] overflow-hidden">
-                  <ImageWithFallback
+                  {/* <ImageWithFallback
                     src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover"
-                  />
+                  /> */}
+                  <AdvancedImage 
+                  className="w-full h-full object-cover"
+                  cldImg={cld.image(`${item.image}`)} 
+                  alt={item.title}/>
                 </div>
                 <div className="p-6">
                   <h3 className="font-bold text-lg text-gray-900 mb-3">

@@ -1,11 +1,9 @@
 import { MissionVision } from "../components/MissionVision";
-import { Users, Award, Globe, Target, BookOpen, Heart, TicketCheck, ArrowBigDown, ArrowBigRightDash, Fingerprint, Pointer, Check } from "lucide-react";
-import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import CountUp from "react-countup";
 import { Achievements } from "../components/Achivements";
-import {teamMembers} from "../data/data"
+import { teamMembers } from "../data/data"
 import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedImage } from '@cloudinary/react';
+import BgImage from "../components/BgImage";
 
 export function About() {
   const cld = new Cloudinary({
@@ -18,24 +16,20 @@ export function About() {
     <div>
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-blue-950 via-blue-700 to-blue-400 py-5">
-        <div className="absolute inset-0 overflow-hidden">
-          <AdvancedImage className="w-full h-full object-cover opacity-20"
-          cldImg={cld.image('lk')}
-          alt="image of a man drawing on a paper"
-        />
-        </div>
+        <BgImage/>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="rounded-xl overflow-hidden shadow-xl h-96 hover:animate-pulse">
-              <ImageWithFallback
-                src="/gallery/girl.JPG"
-                alt="Community workshop"
+              <AdvancedImage
                 className="w-full h-full object-cover"
+                cldImg={cld.image('girl')}
+                alt={`A young woman with styled, beaded hair and a black top standing beside a Taraji Learning Hub banner featuring the text 
+                  "Creative Healing, Bold prevention - Ending GBV through Art."`}
               />
             </div>
             <div>
-              <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-yellow-400 animate-bounce">About Us</h1>
+              <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-yellow-400">About Us</h1>
               <p className="text-xl from-cyan-100 max-w-3xl">
                 Established in Western Kenya,
                 Taraji Learning Hub is dedicated to
@@ -113,12 +107,12 @@ export function About() {
               </div>
             </div>
             <div className="rounded-xl overflow-hidden h-full shadow-xl heroImg">
-             
-              <AdvancedImage 
-              className="w-full h-full object-cover"
-          cldImg={cld.image('tarajipaints')}
-          alt="Hands picking cyon paints from a transparent tin"
-        />
+
+              <AdvancedImage
+                className="w-full h-full object-cover"
+                cldImg={cld.image('tarajipaints')}
+                alt={`Hands of participants gathered around a table reaching for colorful oil pastels and crayons.`}
+              />
             </div>
           </div>
         </div>
@@ -126,32 +120,8 @@ export function About() {
 
       <MissionVision />
 
-      {/* Achievements */}
       <Achievements />
-      {/* <div id="impact" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-            Our Impact
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => {
-              const Icon = achievement.icon;
-              return (
-                <div key={index} className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-cyan-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Icon className="text-yellow-300" size={40} />
-                  </div>
-                  <div className="text-4xl font-bold text-gray-900 mb-2">
-                    <CountUp end={achievement.value} duration={5} />+
-                  </div>
-                  <div className="text-gray-600">{achievement.label}</div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div> */}
-
+      
       {/* Team Section */}
       <div className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -167,11 +137,11 @@ export function About() {
             {teamMembers.map((member, index) => (
               <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <div className="aspect-square overflow-hidden">
-                  
-                  <AdvancedImage className="w-full h-full object-cover opacity-20"
-          cldImg={cld.image(`${member.image}`)}
-          alt={`image of ${member.name}`}
-        />
+
+                  <AdvancedImage className="w-full h-full object-cover"
+                    cldImg={cld.image(`${member.image}`)}
+                    alt={`image of ${member.name}, ${member.role}, taraji`}
+                  />
                 </div>
                 <div className="p-6 text-center">
                   <h3 className="font-bold text-lg text-gray-900 mb-1">
