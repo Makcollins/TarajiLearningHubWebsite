@@ -1,4 +1,3 @@
-import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Calendar, MapPin } from "lucide-react";
 import { PhotoSlider } from "../components/PhotosSlider";
 import { Link } from "react-router";
@@ -31,11 +30,6 @@ export function Gallery() {
                 className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300"
               >
                 <div className="aspect-[4/3] overflow-hidden">
-                  {/* <ImageWithFallback
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover"
-                  /> */}
                   <AdvancedImage 
                   className="w-full h-full object-cover"
                   cldImg={cld.image(`${item.image}`)} 
@@ -61,14 +55,14 @@ export function Gallery() {
           </div>
         </div>
       </div>
-      <div className="w-full bg-gray-700 py-5">
+      {/* <div className="w-full bg-gray-700 py-5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center my-5">
           <h2 className="text-3xl font-bold text-white">
             More...
           </h2>
           <PhotoSlider />
         </div>
-      </div>
+      </div> */}
 
 
       {/* Impact Section */}
