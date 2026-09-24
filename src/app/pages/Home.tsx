@@ -68,10 +68,11 @@ export function Home() {
               Contact Us
             </Link>
             <Link
+            aria-label="Learn more about Taraji learning hub services"
               to="/our-services/"
               className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-cyan-700 transition-colors"
             >
-              Learn More
+              Learn more about our services
             </Link>
           </div>
         </div>

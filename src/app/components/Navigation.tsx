@@ -46,7 +46,7 @@ export function Navigation() {
                 <AdvancedImage cldImg={logo}
                   alt={`Taraji learning hub Logo`}
                   plugins={[
-                    responsive({ steps: [20,40] })
+                    responsive({ steps: 100 })
                   ]}
                 />
               </span>

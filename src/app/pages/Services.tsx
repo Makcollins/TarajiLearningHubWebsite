@@ -6,119 +6,126 @@ import BgImage from "../components/BgImage";
 import { cld } from "../data/data";
 import { AdvancedImage, responsive } from '@cloudinary/react';
 import { format, quality } from "@cloudinary/url-gen/actions/delivery";
+import { Helmet } from 'react-helmet-async';
 
 export function Services() {
   const tarajiServices = cld.image('taraji-services')
     .delivery(format('auto')).delivery(quality('auto'));
   return (
-    <div>
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-br  from-blue-950 via-blue-700 to-blue-400from-cyan-700 to-indigo-600 text-white py-5">
-        <BgImage />
+    <>
+      <Helmet>
+        <title>Our Services | Mental Health & Psychosocial Support</title>
+        <meta name="description" content="Explore our programs including Art & Play Therapy, individual and group counseling, and our sustainable textile initiative designed for emotional healing." />
+      </Helmet>
+      <div>
+        {/* Hero Section */}
+        <div className="relative bg-gradient-to-br  from-blue-950 via-blue-700 to-blue-400from-cyan-700 to-indigo-600 text-white py-5">
+          <BgImage />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-yellow-400 mb-6">Our Services</h1>
-              <p className="text-xl from-cyan-100 max-w-3xl">
-                <TypeAnimation
-                  cursor={false}
-                  sequence={[
-                    `At Taraji Learning Hub, we provide a holistic ecosystem of support designed to foster healing, safety, and long-term resilience. 
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h1 className="text-4xl sm:text-5xl font-bold text-yellow-400 mb-6">Our Services</h1>
+                <p className="text-xl from-cyan-100 max-w-3xl">
+                  <TypeAnimation
+                    cursor={false}
+                    sequence={[
+                      `At Taraji Learning Hub, we provide a holistic ecosystem of support designed to foster healing, safety, and long-term resilience. 
                     From Mental Health & Psychosocial Support, Trauma-Informed Education to Knowledge Development, 
                     researching and creating the manuals that define the future of mental health and social protection systems.`,
-                  ]}
-                  repeat={1}
-                />
-              </p>
-            </div>
-            <div className="growing-image rounded-xl overflow-hidden shadow-xl">
-              <AdvancedImage
-                className="w-full h-full object-cover"
-                cldImg={tarajiServices}
-                alt={`An infographic outlining four core service pillars of Taraji Learning Hub: 
+                    ]}
+                    repeat={1}
+                  />
+                </p>
+              </div>
+              <div className="growing-image rounded-xl overflow-hidden shadow-xl">
+                <AdvancedImage
+                  className="w-full h-full object-cover"
+                  cldImg={tarajiServices}
+                  alt={`An infographic outlining four core service pillars of Taraji Learning Hub: 
                   Mental Health & Psychosocial Support, Family & Caregiver Support, 
                   Child Protection & Safeguarding, and Knowledge & Research Development.`}
-                plugins={[
-                  responsive({ steps: 100 })
-                ]}
-              />
+                  plugins={[
+                    responsive({ steps: 100 })
+                  ]}
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Services Grid */}
-      <div className="py-16 bg-gray-50 backdrop-opacity-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-cyan-600 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon className="text-yellow-300" size={28} />
+        {/* Services Grid */}
+        <div className="py-16 bg-gray-50 backdrop-opacity-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {services.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-14 h-14 bg-gradient-to-br from-cyan-600 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Icon className="text-yellow-300" size={28} />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                          {service.title}
+                        </h3>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                        {service.title}
-                      </h3>
-                    </div>
+                    <p className="text-gray-600 mb-6">
+                      {service.description}
+                    </p>
+
                   </div>
-                  <p className="text-gray-600 mb-6">
-                    {service.description}
-                  </p>
-
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
-      </div>
-      <ImplementationModel />
+        <ImplementationModel />
 
-      {/* How to Access Section */}
-      <div className="py-16 bg-white backdrop-opacity-100">
+        {/* How to Access Section */}
+        <div className="py-16 bg-white backdrop-opacity-100">
 
-        <div className="">
-          <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-8 text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              EXPECTED OUTCOMES
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              <ul>
-                <li>70% increased emotional
-                  resilience among
-                  children, care leavers
-                  (youths) and caregivers.</li>
-                <li>Reduced placement
-                  breakdown or relapse
-                  rates</li>
-                <li>Improved caregiver-child
-                  attachment</li>
-                <li>Strengthened trauma
-                  informed
-                  parenting/caregiving
-                  capacity</li>
-                <li>Institutionalized MHPSS
-                  within care systems</li>
-              </ul>
+          <div className="">
+            <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-8 text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                EXPECTED OUTCOMES
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <ul>
+                  <li>70% increased emotional
+                    resilience among
+                    children, care leavers
+                    (youths) and caregivers.</li>
+                  <li>Reduced placement
+                    breakdown or relapse
+                    rates</li>
+                  <li>Improved caregiver-child
+                    attachment</li>
+                  <li>Strengthened trauma
+                    informed
+                    parenting/caregiving
+                    capacity</li>
+                  <li>Institutionalized MHPSS
+                    within care systems</li>
+                </ul>
 
-            </p>
-          </div>
-          <div className="mt-12 text-center">
-            <Link
-              to="/contact/"
-              className="inline-flex items-center px-8 py-4 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors"
+              </p>
+            </div>
+            <div className="mt-12 text-center">
+              <Link
+                to="/contact/"
+                className="inline-flex items-center px-8 py-4 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors"
 
-            >
-              Contact Us Today
-            </Link>
+              >
+                Contact Us Today
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
 
-    </div>
+      </div>
+    </>
   );
 }

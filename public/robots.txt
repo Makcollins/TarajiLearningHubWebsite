@@ -1,0 +1,11 @@
+# Allow all search engines to crawl the entire website
+User-agent: *
+Allow: /
+
+# Prevent search engines from indexing sensitive or internal folders (Optional)
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+
+# Tell search engines where your sitemap is located
+Sitemap: https://yourdomain.com

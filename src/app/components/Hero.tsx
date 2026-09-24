@@ -52,6 +52,7 @@ export function Hero() {
           </div>
           <div className="rounded-xl overflow-visible mx-auto max-w-96 heroImg">
             <AdvancedImage cldImg={healingArt}
+            className = "w-full h-auto"
               alt={`A Black woman smiling serenely as she paints a canvas, 
               transitioning a dark, stormy landscape on the left into a bright, 
               colorful scene filled with sunshine, 

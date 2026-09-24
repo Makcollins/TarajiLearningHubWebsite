@@ -10,11 +10,13 @@ import { Footer } from "./components/Footer";
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
 import Blogs from "./pages/Blogs";
 import BlogContent from './pages/BlogContent';
+import { HelmetProvider } from 'react-helmet-async';
 
 
 export default function App() {
   // return <RouterProvider router={router} />;
   return <>
+  <HelmetProvider>
   <BrowserRouter>
   <Navigation></Navigation>
   <Routes>
@@ -29,6 +31,7 @@ export default function App() {
     </Routes>
     <Footer />
   </BrowserRouter>
+  </HelmetProvider>
   <FloatingWhatsApp 
         phoneNumber="254799815621" // Required: Include country code without '+' or zeros
         accountName="Taraji Learning Hub" 
