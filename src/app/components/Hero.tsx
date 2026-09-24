@@ -1,18 +1,15 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { TypeAnimation } from 'react-type-animation';
-import { Cloudinary } from "@cloudinary/url-gen";
-import { AdvancedImage } from '@cloudinary/react';
+import { AdvancedImage,responsive } from '@cloudinary/react';
 import BgImage from "./BgImage";
+import {cld} from "../data/data";
+import { format, quality } from "@cloudinary/url-gen/actions/delivery";
 
 export function Hero() {
 
-  const cld = new Cloudinary({
-    cloud: {
-      cloudName: 'xnlxwmb1'
-    }
-  });
+  const healingArt = cld.image('healing-art');
+  healingArt.delivery(format('auto')).delivery(quality('auto'));
 
   return (
     <div className="relative bg-gradient-to-br from-blue-950 via-blue-700 to-blue-400 text-white">
@@ -54,11 +51,15 @@ export function Hero() {
             </div>
           </div>
           <div className="rounded-xl overflow-visible mx-auto max-w-96 heroImg">
-            <AdvancedImage cldImg={cld.image('healing-art')}
+            <AdvancedImage cldImg={healingArt}
               alt={`A Black woman smiling serenely as she paints a canvas, 
               transitioning a dark, stormy landscape on the left into a bright, 
               colorful scene filled with sunshine, 
-            flowers, and butterflies on the right.`} />
+            flowers, and butterflies on the right.`}
+            plugins={[
+              responsive({ steps: [320,380,400] })
+            ]}
+             />
           </div>
         </div>
       </div>

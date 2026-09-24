@@ -1,15 +1,12 @@
 import { Handshake } from "lucide-react";
 import { Link } from "react-router";
 import { partners } from "../data/data"
-import { Cloudinary } from "@cloudinary/url-gen/index";
-import { AdvancedImage } from '@cloudinary/react';
+import { cld } from "../data/data";
+import { AdvancedImage,responsive } from '@cloudinary/react';
+import { format, quality } from "@cloudinary/url-gen/actions/delivery";
 
 export function Partners() {
-  const cld = new Cloudinary({
-    cloud: {
-      cloudName: 'xnlxwmb1'
-    }
-  });
+  
   return (
     <div className="py-16 bg-gray-50 backdrop-opacity-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,21 +23,28 @@ export function Partners() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:mx-50 gap-6">
-          {partners.map((partner, index) => (
+          {partners.map((partner, index) =>{
+            const logo = cld.image(partner.logo)
+
+            logo.delivery(format('auto')).delivery(quality('auto'));
+            return(
             <div
               key={index}
               className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow"
             >
               <div className="h-32 w-32 rounded-full flex items-center justify-center mx-auto mb-4">
                 <AdvancedImage
-                  cldImg={cld.image(`${partner.logo}`)}
+                  cldImg={logo}
                   alt={`logo for ${partner.name}`}
+                  plugins={[
+                    responsive({ steps: [64,128] })
+                  ]}
                 />
               </div>
               <h3 className="font-bold text-gray-900 mb-1">{partner.name}</h3>
               <p className="text-sm text-gray-600">{partner.description}</p>
             </div>
-          ))}
+          )})}
         </div>
 
         <div className="mt-12 text-center">

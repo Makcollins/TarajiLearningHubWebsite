@@ -24,8 +24,8 @@ export default function App() {
       <Route path='/our-impact/' element={<Infographics />} />
       <Route path='/contact/' element={<Contact />} />
       <Route path='/gallery/' element={<Gallery/>} />
-      <Route path='/blogs' element={<Blogs/>} />
-      <Route path='/blogs/:id' element={<BlogContent/>} />
+      {/* <Route path='/blogs' element={<Blogs/>} />
+      <Route path='/blogs/:id' element={<BlogContent/>} /> */}
     </Routes>
     <Footer />
   </BrowserRouter>

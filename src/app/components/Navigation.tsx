@@ -2,11 +2,18 @@ import { Link, useLocation } from "react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { FaAngleDown } from "react-icons/fa6";
+import { cld } from "../data/data";
+import { AdvancedImage,responsive } from '@cloudinary/react';
+import { format, quality } from "@cloudinary/url-gen/actions/delivery";
 
 export function Navigation() {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
+
+  const logo = cld.image('taraji-2b');
+
+  logo.delivery(format('auto')).delivery(quality('auto'));
 
   const links = [
     { path: "/", label: "Home" },
@@ -17,7 +24,7 @@ export function Navigation() {
   const more_menu = [
     { path: "/gallery/", label: "Gallery" },
     { path: "/contact/", label: "Contact Us" },
-    { path: "/blogs", label: "Blogs" },
+    // { path: "/blogs", label: "Blogs" },
   ];
   const phone_menu = links.concat(more_menu);
 
@@ -36,7 +43,14 @@ export function Navigation() {
           <Link to="/" className="flex items-center space-x-2">
             {/* <div className="w-10 h-10 bg-gradient-to-br from-cyan-600 to-yellow-600 rounded-lg flex items-center justify-center"> */}
             <div className="w-10 h-10 flex items-center justify-center">
-              <span className="text-white"><img src="/logo/taraji-2b.png" alt="Taraji learning hub Logo" /></span>
+              <span className="text-white">
+                <AdvancedImage cldImg={logo}
+                  alt={`Taraji learning hub Logo`}
+                  plugins={[
+                    responsive({ steps: [20,40] })
+                  ]}
+                />
+              </span>
             </div>
             <span className="font-bold text-xl text-white">
               Taraji Learning Hub
@@ -58,11 +72,11 @@ export function Navigation() {
               </Link>
             ))}
             <div>
-              <div className={`flex items-center px-2 text-white hover:text-yellow-400`} 
-              onClick={()=>setMoreOpen(true)} onMouseEnter={()=>setMoreOpen(true)}>
+              <div className={`flex items-center px-2 text-white hover:text-yellow-400`}
+                onClick={() => setMoreOpen(true)} onMouseEnter={() => setMoreOpen(true)}>
                 More <FaAngleDown /></div>
-              <div className="absolute pb-2 @max-lg:right-0 bg-blue-700" onMouseLeave={()=>setMoreOpen(false)}>
-               { moreOpen && more_menu.map((link) => (
+              <div className="absolute pb-2 @max-lg:right-0 bg-blue-700" onMouseLeave={() => setMoreOpen(false)}>
+                {moreOpen && more_menu.map((link) => (
                   <Link
                     key={link.path}
                     to={link.path}
@@ -70,7 +84,7 @@ export function Navigation() {
                     className={`block p-2 py-2 ${isActive(link.path)
                       ? "text-yellow-400 bg-blue-800"
                       : "text-white hover:bg-blue-800"
-                      }`} 
+                      }`}
                   >
                     {link.label}
                   </Link>
@@ -91,7 +105,7 @@ export function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden pb-4">
-            {phone_menu.map((link:any) => (
+            {phone_menu.map((link: any) => (
               <Link
                 key={link.path}
                 to={link.path}

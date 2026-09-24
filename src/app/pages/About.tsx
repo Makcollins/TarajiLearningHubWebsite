@@ -1,29 +1,30 @@
 import { MissionVision } from "../components/MissionVision";
 import { Achievements } from "../components/Achivements";
 import { teamMembers } from "../data/data"
-import { Cloudinary } from "@cloudinary/url-gen";
-import { AdvancedImage } from '@cloudinary/react';
 import BgImage from "../components/BgImage";
+import { cld } from "../data/data";
+import { AdvancedImage, responsive } from '@cloudinary/react';
+import { format, quality } from "@cloudinary/url-gen/actions/delivery";
 
 export function About() {
-  const cld = new Cloudinary({
-    cloud: {
-      cloudName: 'xnlxwmb1'
-    }
-  });
+  const aboutImg = cld.image('girl')
+    .delivery(format('auto')).delivery(quality('auto'));
+
+  const storyImg = cld.image('tarajipaints')
+    .delivery(format('auto')).delivery(quality('auto'));
 
   return (
     <div>
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-blue-950 via-blue-700 to-blue-400 py-5">
-        <BgImage/>
+        <BgImage />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="rounded-xl overflow-hidden shadow-xl h-96 hover:animate-pulse">
               <AdvancedImage
                 className="w-full h-full object-cover"
-                cldImg={cld.image('girl')}
+                cldImg={aboutImg}
                 alt={`A young woman with styled, beaded hair and a black top standing beside a Taraji Learning Hub banner featuring the text 
                   "Creative Healing, Bold prevention - Ending GBV through Art."`}
               />
@@ -107,11 +108,13 @@ export function About() {
               </div>
             </div>
             <div className="rounded-xl overflow-hidden h-full shadow-xl heroImg">
-
               <AdvancedImage
                 className="w-full h-full object-cover"
-                cldImg={cld.image('tarajipaints')}
+                cldImg={storyImg}
                 alt={`Hands of participants gathered around a table reaching for colorful oil pastels and crayons.`}
+              plugins={[
+                    responsive({ steps: 100 })
+                  ]}
               />
             </div>
           </div>
@@ -121,7 +124,7 @@ export function About() {
       <MissionVision />
 
       <Achievements />
-      
+
       {/* Team Section */}
       <div className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -134,13 +137,20 @@ export function About() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
+            {teamMembers.map((member, index) => {
+              const img = cld.image(member.image)
+              .delivery(format('auto')).delivery(quality('auto'));
+
+              return (
               <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <div className="aspect-square overflow-hidden">
 
                   <AdvancedImage className="w-full h-full object-cover"
-                    cldImg={cld.image(`${member.image}`)}
+                    cldImg={img}
                     alt={`image of ${member.name}, ${member.role}, taraji`}
+                    plugins={[
+                      responsive({steps:100})
+                    ]}
                   />
                 </div>
                 <div className="p-6 text-center">
@@ -150,7 +160,7 @@ export function About() {
                   <p className="from-cyan-600">{member.role}</p>
                 </div>
               </div>
-            ))}
+            )})}
           </div>
         </div>
       </div>

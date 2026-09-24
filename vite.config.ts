@@ -10,6 +10,9 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  optimizeDeps: {
+    exclude: ['strapi']
+  },
   resolve: {
     alias: {
       // Alias @ to the src directory

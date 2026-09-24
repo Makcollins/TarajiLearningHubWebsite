@@ -1,9 +1,15 @@
 import { Link } from "react-router";
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Linkedin, Facebook, Mail, Phone, MapPin } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { cld } from "../data/data";
+import { AdvancedImage, responsive } from '@cloudinary/react';
+import { format, quality } from "@cloudinary/url-gen/actions/delivery";
 
 export function Footer() {
+  const logo = cld.image('taraji-3d');
+
+  logo.delivery(format('auto')).delivery(quality('auto'));
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -12,7 +18,14 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 flex items-center justify-center">
-                <span className="text-white font-bold text-xl"><img src="/logo/taraji-3d.png" alt="" /></span>
+                <span className="text-white font-bold text-xl">
+                  <AdvancedImage cldImg={logo}
+                  alt={`Taraji learning hub Logo`}
+                  plugins={[
+                    responsive({ steps: [20,40] })
+                  ]}
+                />
+                </span>
               </div>
               <span className="font-bold text-lg">Taraji Learning Hub</span>
             </div>
@@ -73,7 +86,7 @@ export function Footer() {
               </li>
               <li className="flex items-center space-x-2 text-sm">
                 <a href="mailto:info@tarajilearninghub.com" className="flex items-center space-x-2 text-sm">
-                  <Mail size={16} className="text-cyan-400 flex-shrink-0"/>
+                  <Mail size={16} className="text-cyan-400 flex-shrink-0" />
                   <span className="text-gray-400">info@tarajilearninghub.com</span>
                 </a>
               </li>
