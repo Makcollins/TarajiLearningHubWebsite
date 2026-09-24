@@ -57,7 +57,7 @@ export function Partners() {
           </ul>
           <Link
             to="/contact/"
-            className="inline-flex items-center px-6 py-3 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-cyan-700 text-white rounded-lg hover:bg-cyan-800 transition-colors"
           >
             Get in Touch
           </Link>

@@ -5,6 +5,7 @@ import BgImage from "../components/BgImage";
 import { cld } from "../data/data";
 import { AdvancedImage, responsive } from '@cloudinary/react';
 import { format, quality } from "@cloudinary/url-gen/actions/delivery";
+import { Helmet } from 'react-helmet-async';
 
 export function About() {
   const aboutImg = cld.image('girl')
@@ -14,6 +15,11 @@ export function About() {
     .delivery(format('auto')).delivery(quality('auto'));
 
   return (
+    <>
+    <Helmet>
+      <title>About Us | Taraji Learning Hub</title>
+      <meta name="description" content="Discover the mission behind Taraji Learning Hub. We advance psychosocial well-being through creative, safe, and trauma-informed spaces in Kenya." />
+    </Helmet>
     <div>
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-blue-950 via-blue-700 to-blue-400 py-5">
@@ -165,5 +171,6 @@ export function About() {
         </div>
       </div>
     </div>
+    </>
   );
 }

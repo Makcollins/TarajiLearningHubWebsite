@@ -1,7 +1,6 @@
 import { Link } from "react-router";
-import { Instagram, Linkedin, Facebook, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import { cld } from "../data/data";
 import { AdvancedImage, responsive } from '@cloudinary/react';
 import { format, quality } from "@cloudinary/url-gen/actions/delivery";
@@ -75,17 +74,17 @@ export function Footer() {
                 <span className="text-gray-400">Kisii, Kenya</span>
               </li>
               <li>
-                <a href="tel:+254745461993" className="flex items-center space-x-2 text-sm"><Phone size={16} className="text-cyan-400 flex-shrink-0" />
-                  <span className="text-gray-400">+254 745 461993</span>
+                <a href="tel:+254745461993" className="flex items-center space-x-2 text-sm" aria-label="Call Us"><Phone size={16} className="text-cyan-400 flex-shrink-0" />
+                  <span className="text-gray-400">+254 799 815621</span>
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/254745461993" className="flex items-center space-x-2 text-sm">
+                <a href="https://wa.me/254745461993" className="flex items-center space-x-2 text-sm" aria-label="Contact us via WhatsApp">
                   <FaWhatsapp size={16} className="text-cyan-400 flex-shrink-0" />
-                  <span className="text-gray-400">+254 745 461993</span></a>
+                  <span className="text-gray-400">+254 799 815621</span></a>
               </li>
               <li className="flex items-center space-x-2 text-sm">
-                <a href="mailto:info@tarajilearninghub.com" className="flex items-center space-x-2 text-sm">
+                <a href="mailto:info@tarajilearninghub.com" className="flex items-center space-x-2 text-sm" aria-label="email us">
                   <Mail size={16} className="text-cyan-400 flex-shrink-0" />
                   <span className="text-gray-400">info@tarajilearninghub.com</span>
                 </a>
@@ -98,29 +97,20 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
               <a
+              aria-label="Visit our instagram profile"
                 href="https://www.instagram.com/tarajilearning"
                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-cyan-600 transition-colors"
               >
                 <Instagram size={20} />
               </a>
               <a
+              aria-label="visit our linkedin page"
                 href="https://www.linkedin.com/company/taraji-learning-hub/#"
                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-cyan-600 transition-colors"
               >
                 <Linkedin size={20} />
               </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-cyan-600 transition-colors"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-cyan-600 transition-colors"
-              >
-                <FaXTwitter size={20} />
-              </a>
+              
             </div>
           </div>
         </div>

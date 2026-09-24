@@ -1,23 +1,15 @@
-import { Brain, Shield, BookOpen, Users, Heart, MessageCircle, GraduationCap, Phone } from "lucide-react";
-import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-// import "./css/services.css";
 import { TypeAnimation } from "react-type-animation";
 import { ImplementationModel } from "../components/ImplementationModel";
-import { Link } from "react-router";
-import { Cloudinary } from "@cloudinary/url-gen";
-import { AdvancedImage } from '@cloudinary/react';
+import { Link } from "react-router";;
 import { services } from '../data/data'
 import BgImage from "../components/BgImage";
+import { cld } from "../data/data";
+import { AdvancedImage, responsive } from '@cloudinary/react';
+import { format, quality } from "@cloudinary/url-gen/actions/delivery";
 
 export function Services() {
-
-  const cld = new Cloudinary({
-    cloud: {
-      cloudName: 'xnlxwmb1'
-    }
-  });
-
-
+  const tarajiServices = cld.image('taraji-services')
+    .delivery(format('auto')).delivery(quality('auto'));
   return (
     <div>
       {/* Hero Section */}
@@ -43,10 +35,13 @@ export function Services() {
             <div className="growing-image rounded-xl overflow-hidden shadow-xl">
               <AdvancedImage
                 className="w-full h-full object-cover"
-                cldImg={cld.image('taraji-services')}
+                cldImg={tarajiServices}
                 alt={`An infographic outlining four core service pillars of Taraji Learning Hub: 
                   Mental Health & Psychosocial Support, Family & Caregiver Support, 
                   Child Protection & Safeguarding, and Knowledge & Research Development.`}
+                plugins={[
+                  responsive({ steps: 100 })
+                ]}
               />
             </div>
           </div>

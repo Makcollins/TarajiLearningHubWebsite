@@ -56,7 +56,9 @@ export function Infographics() {
                       animationDuration={500}
                     >
                       {impactData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}
+                        aria-label={`${entry.name}:${entry.value}`}
+                        />
                       ))}
                     </Pie>
                     <Tooltip />

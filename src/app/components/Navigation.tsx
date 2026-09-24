@@ -41,7 +41,6 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            {/* <div className="w-10 h-10 bg-gradient-to-br from-cyan-600 to-yellow-600 rounded-lg flex items-center justify-center"> */}
             <div className="w-10 h-10 flex items-center justify-center">
               <span className="text-white">
                 <AdvancedImage cldImg={logo}
@@ -96,6 +95,7 @@ export function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Menu"
             className="md:hidden p-2 rounded-md text-white hover:bg-gray-500"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
